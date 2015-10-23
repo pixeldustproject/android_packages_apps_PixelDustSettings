@@ -79,4 +79,8 @@
     <string name="powermenu_lockdown">Device lockdown</string>
     <string name="powermenu_voiceassist">Voice Assist</string>
     <string name="powermenu_assist">Assist</string>
+
+    <!-- Wake when connected/disconnected -->
+    <string name="wake_when_plugged_or_unplugged_title">Wake on plug</string>
+    <string name="wake_when_plugged_or_unplugged_summary">Turn on screen when connecting or disconnecting charger</string>
 </resources>
