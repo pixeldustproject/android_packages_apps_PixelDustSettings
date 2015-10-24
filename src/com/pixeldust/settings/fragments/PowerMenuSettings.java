@@ -32,13 +32,20 @@ import com.android.settings.R;
 import android.support.annotation.NonNull;
 
 import com.android.internal.logging.MetricsProto.MetricsEvent;
+import com.android.internal.widget.LockPatternUtils;
 import com.android.settings.SettingsPreferenceFragment;
+import com.pixeldust.settings.preferences.SystemSettingSwitchPreference;
 
 import java.util.Arrays;
 import java.util.ArrayList;
 import java.util.List;
 
 public class PowerMenuSettings extends SettingsPreferenceFragment {
+
+    private static final String POWER_CATEGORY = "power_category";
+    private static final String ACTION_CATEGORY = "action_category";
+
+    private static final int MY_USER_ID = UserHandle.myUserId();
 
     @Override
     protected int getMetricsCategory() {
@@ -50,6 +57,17 @@ public class PowerMenuSettings extends SettingsPreferenceFragment {
         super.onCreate(savedInstanceState);
 
         addPreferencesFromResource(R.xml.pixeldust_settings_power);
+        final PreferenceScreen prefScreen = getPreferenceScreen();
+        final LockPatternUtils lockPatternUtils = new LockPatternUtils(getActivity());
+ 
+        final PreferenceCategory actionCategory =
+                (PreferenceCategory) prefScreen.findPreference(ACTION_CATEGORY);
+        final PreferenceCategory powerCategory =
+                (PreferenceCategory) prefScreen.findPreference(POWER_CATEGORY);
+
+        if (!lockPatternUtils.isSecure(MY_USER_ID)) {
+            prefScreen.removePreference(powerCategory);
+        }
     }
 
 

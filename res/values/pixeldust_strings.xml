@@ -98,4 +98,12 @@
     <!-- Lockscreen torch -->
     <string name="keyguard_torch_title">Lockscreen torch</string>
     <string name="keyguard_torch_summary">Longpress power button with screen off turns on torch</string>
+
+    <!-- Power Menu fragment -->
+    <string name="powermenu_settings_title">Power menu</string>
+    <string name="power_category">Power menu options</string>
+    <string name="action_category">Power menu actions</string>
+    <!-- Power menu on secure lockscreen -->
+    <string name="lockscreen_enable_power_menu_title">Show/hide power menu</string>
+    <string name="lockscreen_enable_power_menu_summary">Show power menu in the keyguard for a secure lock</string>
 </resources>
