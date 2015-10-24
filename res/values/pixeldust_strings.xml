@@ -83,4 +83,8 @@
     <!-- Wake when connected/disconnected -->
     <string name="wake_when_plugged_or_unplugged_title">Wake on plug</string>
     <string name="wake_when_plugged_or_unplugged_summary">Turn on screen when connecting or disconnecting charger</string>
+
+    <!-- Lockscreen cover art -->
+    <string name="media_art_title">Media cover art</string>
+    <string name="media_art_summary">Enable media cover art on the lockscreen</string>
 </resources>
