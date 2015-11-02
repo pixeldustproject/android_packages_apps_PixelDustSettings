@@ -170,6 +170,10 @@
     <string name="vol_zen_title">Do not disturb switch</string>
     <string name="vol_zen_summary">Show do not disturb switch on volume panel</string>
 
+    <!-- Volume key controls media stream -->
+    <string name="volume_keys_control_media_stream_title">Volume keys control media volume</string>
+    <string name="volume_keys_control_media_stream_summary">Force volume keys to control media stream</string>
+
     <!-- qs brightness slider -->
     <string name="qs_brightness_slider_title">Brightness slider</string>
     <string name="qs_brightness_slider_summary">Show brightness slider on quick settings panel</string>
