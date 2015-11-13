@@ -325,6 +325,10 @@
     <string name="qs_set_animation_duration">%1$s</string>
     <string name="qs_set_animation_interpolator">%1$s</string>
 
+    <!-- Quicks settings vibrate -->
+    <string name="quick_settings_vibrate_title">Vibrate on touch</string>
+    <string name="quick_settings_vibrate_summary">Vibrate when touching tiles</string>
+
     <!-- Toast Animation -->
     <string name="toast_animation_title">Toast animation</string>
     <string name="toast_none_animation">None</string>
