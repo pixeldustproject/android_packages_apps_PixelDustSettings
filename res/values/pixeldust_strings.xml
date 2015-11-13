@@ -121,6 +121,9 @@
     <!-- qs brightness slider -->
     <string name="qs_brightness_slider_title">Brightness slider</string>
     <string name="qs_brightness_slider_summary">Show brightness slider on quick settings panel</string>
+    <!-- Quicks settings vibrate -->
+    <string name="quick_settings_vibrate_title">Vibrate on touch</string>
+    <string name="quick_settings_vibrate_summary">Vibrate when touching tiles</string>
     <!-- Custom carrier label and position -->
     <string name="carrier_label_settings_title">Carrier Label</string>
     <string name="carrier_label_settings_summary">Customize the carrier label</string>
