@@ -30,6 +30,11 @@
             android:targetClass="com.cyanogenmod.lockclock.preference.Preferences" />
         </PreferenceScreen>
 
+    <Preference
+        android:key="pa_pie_control"
+        android:title="@string/pa_pie_control_title"
+        android:fragment="com.pixeldust.settings.fragments.PieControl" />
+
     <com.pixeldust.settings.preferences.GlobalSettingSwitchPreference
         android:key="wake_when_plugged_or_unplugged"
         android:title="@string/wake_when_plugged_or_unplugged_title"
