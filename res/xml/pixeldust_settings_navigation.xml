@@ -22,6 +22,11 @@
         android:key="navigation_bar"
         android:title="@string/navbar_settings_title" >
 
+        <Preference
+            android:key="pa_pie_control"
+            android:title="@string/pa_pie_control_title"
+            android:fragment="com.pixeldust.settings.fragments.PieControl" />
+
         <com.pixeldust.settings.preferences.SystemSettingSwitchPreference
             android:key="navigation_bar_enabled"
             android:title="@string/navbar_enable_bar"
