@@ -35,6 +35,11 @@
         android:title="@string/pa_pie_control_title"
         android:fragment="com.pixeldust.settings.fragments.PieControl" />
 
+    <Preference
+        android:key="appsidebar"
+        android:title="@string/app_sidebar_title"
+        android:fragment="com.pixeldust.settings.fragments.AppSidebar" />
+
     <com.pixeldust.settings.preferences.GlobalSettingSwitchPreference
         android:key="wake_when_plugged_or_unplugged"
         android:title="@string/wake_when_plugged_or_unplugged_title"
