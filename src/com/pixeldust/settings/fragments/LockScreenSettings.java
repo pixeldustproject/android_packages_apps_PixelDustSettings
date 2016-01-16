@@ -21,13 +21,16 @@ import com.android.internal.logging.MetricsProto.MetricsEvent;
 
 import android.app.Activity;
 import android.app.WallpaperManager;
+import android.content.Context;
 import android.content.Intent;
+import android.hardware.fingerprint.FingerprintManager;
 import android.net.Uri;
 import android.os.Bundle;
-import android.preference.ListPreference;
-import android.preference.Preference;
-import android.preference.PreferenceScreen;
-import android.preference.Preference.OnPreferenceChangeListener;
+import android.os.UserHandle;
+import android.support.v7.preference.PreferenceCategory;
+import android.support.v7.preference.PreferenceScreen;
+
+import com.android.internal.widget.LockPatternUtils;
 import com.pixeldust.settings.preferences.SeekBarPreference;
 import android.widget.Toast;
 
@@ -40,8 +43,12 @@ import com.pixeldust.settings.preferences.SystemSettingSwitchPreference;
 public class LockScreenSettings extends SettingsPreferenceFragment {
 
     private static final String KEYGUARD_TORCH = "keyguard_toggle_torch";
+    private static final String FINGERPRINT_VIB = "fingerprint_success_vib";
 
     private SystemSettingSwitchPreference mLsTorch;
+    private FingerprintManager mFingerprintManager;
+
+    private SystemSettingSwitchPreference mFingerprintVib;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -52,6 +59,12 @@ public class LockScreenSettings extends SettingsPreferenceFragment {
         mLsTorch = (SystemSettingSwitchPreference) findPreference(KEYGUARD_TORCH);
         if (!Utils.deviceSupportsFlashLight(getActivity())) {
             prefScreen.removePreference(mLsTorch);
+        }
+
+        mFingerprintManager = (FingerprintManager) getActivity().getSystemService(Context.FINGERPRINT_SERVICE);
+        mFingerprintVib = (SystemSettingSwitchPreference) findPreference(FINGERPRINT_VIB);
+        if (!mFingerprintManager.isHardwareDetected()){
+            prefScreen.removePreference(mFingerprintVib);
         }
     }
 
