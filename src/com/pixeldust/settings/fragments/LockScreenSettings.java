@@ -34,13 +34,25 @@ import android.widget.Toast;
 import android.provider.Settings;
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
+import com.pixeldust.settings.utils.Utils;
+import com.pixeldust.settings.preferences.SystemSettingSwitchPreference;
 
 public class LockScreenSettings extends SettingsPreferenceFragment {
+
+    private static final String KEYGUARD_TORCH = "keyguard_toggle_torch";
+
+    private SystemSettingSwitchPreference mLsTorch;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         addPreferencesFromResource(R.xml.pixeldust_settings_lockscreen);
+        PreferenceScreen prefScreen = getPreferenceScreen();
+
+        mLsTorch = (SystemSettingSwitchPreference) findPreference(KEYGUARD_TORCH);
+        if (!Utils.deviceSupportsFlashLight(getActivity())) {
+            prefScreen.removePreference(mLsTorch);
+        }
     }
 
     @Override
