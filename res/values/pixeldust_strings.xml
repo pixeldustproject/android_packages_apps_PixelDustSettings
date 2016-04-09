@@ -236,4 +236,8 @@
     <string name="screen_record_chord_title">Power + volume up behavior</string>
     <string name="screen_record_chord_screenrecord">Start screen recording</string>
     <string name="screen_record_chord_selscreenshot">Take screenshot of selectable area</string>
+
+    <!-- Three finger swipe screenshot -->
+    <string name="three_finger_gesture">Three finger screenshot</string>
+    <string name="three_finger_gesture_summary">Swipe three fingers across the screen to screenshot</string>
 </resources>
