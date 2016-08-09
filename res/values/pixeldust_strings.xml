@@ -179,6 +179,9 @@
     <!-- statusbar icon blacklist -->
     <string name="status_bar_icon_blacklist_title">Status bar icons</string>
     <string name="status_bar_icon_blacklist_summary">Configure what icons are shown on status bar</string>
+    <!-- Bluetooth status -->
+    <string name="bluetooth_battery_title">Show Bluetooth battery status</string>
+    <string name="bluetooth_battery_summary">Show battery status for the currently connected bluetooth device, if available.</string>
 
     <!-- Navbar tuner -->
     <string name="navbar_tuner_title">Navbar tuner</string>
