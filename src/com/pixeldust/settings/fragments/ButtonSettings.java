@@ -57,6 +57,7 @@ public class ButtonSettings extends SettingsPreferenceFragment implements
     private static final String KEY_HOME_DOUBLE_TAP = "hardware_keys_home_double_tap";
     private static final String KEY_MENU_PRESS = "hardware_keys_menu_press";
     private static final String KEY_MENU_LONG_PRESS = "hardware_keys_menu_long_press";
+    private static final String KILL_APP_LONGPRESS_TIMEOUT = "kill_app_longpress_timeout";
 
     private static final String CATEGORY_POWER = "power_key";
     private static final String CATEGORY_HOME = "home_key";
@@ -95,6 +96,7 @@ public class ButtonSettings extends SettingsPreferenceFragment implements
     private ListPreference mMenuPressAction;
     private ListPreference mMenuLongPressAction;
     private ListPreference mScreenrecordChordType;
+    private ListPreference mKillAppLongpressTimeout;
 
     private Handler mHandler;
 
@@ -172,6 +174,14 @@ public class ButtonSettings extends SettingsPreferenceFragment implements
                 Settings.System.SCREENRECORD_CHORD_TYPE, 0);
         mScreenrecordChordType = initActionList(SCREENRECORD_CHORD_TYPE,
                 recordChordValue);
+
+        // Back long press timeout
+        mKillAppLongpressTimeout = (ListPreference) findPreference(KILL_APP_LONGPRESS_TIMEOUT);
+        mKillAppLongpressTimeout.setOnPreferenceChangeListener(this);
+        int KillAppLongpressTimeout = Settings.Secure.getInt(getContentResolver(),
+        	Settings.Secure.KILL_APP_LONGPRESS_TIMEOUT, 1000);
+        mKillAppLongpressTimeout.setValue(Integer.toString(KillAppLongpressTimeout));
+        mKillAppLongpressTimeout.setSummary(mKillAppLongpressTimeout.getEntry());
     }
 
     private ListPreference initActionList(String key, int value) {
@@ -210,6 +220,16 @@ public class ButtonSettings extends SettingsPreferenceFragment implements
         } else if  (preference == mScreenrecordChordType) {
             handleActionListChange(mScreenrecordChordType, newValue,
                     Settings.System.SCREENRECORD_CHORD_TYPE);
+            return true;
+        } else if (preference == mKillAppLongpressTimeout) {
+            String KillAppLongpressTimeout = (String) newValue;
+            int KillAppLongpressTimeoutValue = Integer.parseInt(KillAppLongpressTimeout);
+            Settings.Secure.putInt(getActivity().getContentResolver(),
+                    Settings.Secure.KILL_APP_LONGPRESS_TIMEOUT, KillAppLongpressTimeoutValue);
+            int KillAppLongpressTimeoutIndex = mKillAppLongpressTimeout
+                    .findIndexOfValue(KillAppLongpressTimeout);
+            mKillAppLongpressTimeout
+                    .setSummary(mKillAppLongpressTimeout.getEntries()[KillAppLongpressTimeoutIndex]);
             return true;
         }
         return false;
