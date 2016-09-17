@@ -36,4 +36,9 @@
             android:title="@string/battery_title"
             android:fragment="com.pixeldust.settings.fragments.StatusbarBatteryStyle" />
 
+    <PreferenceScreen
+            android:key="network_traffic_state"
+            android:fragment="com.pixeldust.settings.fragments.NetworkTraffic"
+            android:title="@string/network_traffic_title" />
+
 </PreferenceScreen>
