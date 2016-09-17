@@ -218,4 +218,16 @@
     <string name="weather_hide_panel_custom_summary">The weather panel will be hidden when the visible notifications will reach the chosen number of notifications</string>
     <string name="weather_hide_panel_never_summary">The weather panel won\`t be hidden</string>
     <string name="weather_number_of_notifications_title">Number of notifications</string>
+
+    <!-- Power Menu -->
+    <string name="powermenu_reboot">Reboot</string>
+    <string name="powermenu_screenshot">Screenshot</string>
+    <string name="powermenu_torch">Flashlight</string>
+    <string name="powermenu_airplane">Airplane mode</string>
+    <string name="powermenu_soundpanel">Sound panel</string>
+    <string name="powermenu_users">User switcher</string>
+    <string name="powermenu_settings">Settings shortcut</string>
+    <string name="powermenu_lockdown">Device lockdown</string>
+    <string name="powermenu_voiceassist">Voice Assist</string>
+    <string name="powermenu_assist">Assist</string>
 </resources>
