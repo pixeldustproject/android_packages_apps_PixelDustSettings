@@ -66,4 +66,17 @@
     <!-- Volume button orientation based on current rotation -->
     <string name="swap_volume_buttons_title">Swap volume rocker orientation</string>
     <string name="swap_volume_buttons_summary">Adjust the rocker orientation based on current rotation</string>
+
+    <!-- Extended Power Menu -->
+    <string name="powermenu_reboot">Reboot</string>
+    <string name="powermenu_screenshot">Screenshot</string>
+    <string name="powermenu_screenrecord">Screen record</string>
+    <string name="powermenu_torch">Flashlight</string>
+    <string name="powermenu_airplane">Airplane mode</string>
+    <string name="powermenu_soundpanel">Sound panel</string>
+    <string name="powermenu_users">User switcher</string>
+    <string name="powermenu_settings">Settings shortcut</string>
+    <string name="powermenu_lockdown">Device lockdown</string>
+    <string name="powermenu_voiceassist">Voice Assist</string>
+    <string name="powermenu_assist">Assist</string>
 </resources>
