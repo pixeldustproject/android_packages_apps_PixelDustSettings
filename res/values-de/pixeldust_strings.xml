@@ -589,4 +589,7 @@
     <!-- Tiles settings  -->
     <string name="qs_wifi_easy_toggle_title">WiFi Easy Toggle</string>
     <string name="qs_wifi_easy_toggle_summary">Mit einem Klick WiFi ein- oder ausschalten anstatt in die Einstellungen zu springen</string>
+
+    <string name="qs_bt_easy_toggle_title">Bluetooth Easy Toggle</string>
+    <string name="qs_bt_easy_toggle_summary">Mit einem Klick Bluetooth ein- oder ausschalten anstatt in die Einstellungen zu springen</string>
 </resources>
