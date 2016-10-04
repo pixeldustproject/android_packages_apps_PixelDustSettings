@@ -585,4 +585,8 @@
     <!-- Allow fake signature checkbox in developer settings -->
     <string name="allow_signature_fake">App Signature Spoofing erlauben</string>
     <string name="allow_signature_fake_summary">Vorsicht: Erlaubt es einer App sich als eine andere App auszugeben und hierdurch Sicherheitsvorkehrungen zu umgehen.</string>
+
+    <!-- Tiles settings  -->
+    <string name="qs_wifi_easy_toggle_title">WiFi Easy Toggle</string>
+    <string name="qs_wifi_easy_toggle_summary">Mit einem Klick WiFi ein- oder ausschalten anstatt in die Einstellungen zu springen</string>
 </resources>
