@@ -67,9 +67,10 @@ public class NotificationSettings extends SettingsPreferenceFragment implements 
             Settings.System.putString(getContentResolver(),
                     Settings.System.TOAST_ANIMATION, (String) newValue);
             mToastAnimation.setSummary(mToastAnimation.getEntries()[index]);
-            Toast.makeText(getActivity(), "Toast test!!!", Toast.LENGTH_SHORT).show();
-         }
-         return false;
+            Toast.makeText(getActivity(), mToastAnimation.getEntries()[index],
+                    Toast.LENGTH_SHORT).show();
+        }
+        return false;
     }
 
     @Override
