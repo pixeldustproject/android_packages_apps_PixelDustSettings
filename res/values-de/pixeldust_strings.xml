@@ -62,6 +62,8 @@
     <string name="lockclock_title">cLock Widget</string>
     <string name="lockclock_summary">Einstellungen für das \'cLock\' Widget anzeigen oder ändern</string>
 
+    <string name="other_options_category">Weitere Optionen</string>
+
     <!-- Navbar -->
     <string name="nav_bar_dynamic_title">Dynamische Navigationsleistenfarbe</string>
     <string name="nav_bar_dynamic_summary">Gleicht die Hintergrundfarbe der Navigationsleiste an den primären Farbton der App an. Hinweis: die gewünschte App neustarten, um den Effekt zu sehen</string>
@@ -579,4 +581,8 @@
     <!-- Whether to display IME switcher notifcation -->
     <string name="ime_switcher_notify">Auswahl der Eingabemethode</string>
     <string name="ime_switcher_notify_summary">Benachrichtigung zur Auswahl der Eingabemethode anzeigen</string>
+
+    <!-- Allow fake signature checkbox in developer settings -->
+    <string name="allow_signature_fake">App Signature Spoofing erlauben</string>
+    <string name="allow_signature_fake_summary">Vorsicht: Erlaubt es einer App sich als eine andere App auszugeben und hierdurch Sicherheitsvorkehrungen zu umgehen.</string>
 </resources>

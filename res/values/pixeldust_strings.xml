@@ -151,6 +151,8 @@
     <string name="lockclock_title">cLock widget</string>
     <string name="lockclock_summary">View or change how the \'cLock\' widget will display</string>
 
+    <string name="other_options_category">More options</string>
+
     <!-- Language options - Volume rocker cursor control -->
     <string name="cursor_section_header">Cursor</string>
 
@@ -892,4 +894,8 @@
     <!-- Whether to display IME switcher notifcation -->
     <string name="ime_switcher_notify">Selector notification</string>
     <string name="ime_switcher_notify_summary">Display input method selector notification</string>
+
+    <!-- Allow fake signature checkbox in developer settings -->
+    <string name="allow_signature_fake">Allow signature spoofing</string>
+    <string name="allow_signature_fake_summary">Attention: Allow apps to bypass security systems by pretending to be a different app.</string>
 </resources>
