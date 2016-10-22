@@ -593,6 +593,9 @@
     <string name="qs_bt_easy_toggle_title">Bluetooth Easy Toggle</string>
     <string name="qs_bt_easy_toggle_summary">Mit einem Klick Bluetooth ein- oder ausschalten anstatt in die Einstellungen zu springen</string>
 
+    <string name="qs_advanced_data_title">Mobildaten Easy Toggle</string>
+    <string name="qs_advanced_data_summary">Mit einem Klick Mobildaten ein- oder ausschalten anstatt in die Einstellungen zu springen</string>
+
     <!-- Bluetooth battery -->
     <string name="bluetooth_battery_title">Akku für BT-Geräte</string>
     <string name="bluetooth_battery_summary">Akkuladestand für Bluetooth-Geräte anzeigen</string>
