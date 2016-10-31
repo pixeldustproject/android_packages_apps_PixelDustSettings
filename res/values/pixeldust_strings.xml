@@ -183,4 +183,10 @@
     <string name="screen_record_chord_title">Power + volume up behavior</string>
     <string name="screen_record_chord_screenrecord">Start screen recording</string>
     <string name="screen_record_chord_selscreenshot">Take screenshot of selectable area</string>
+
+    <!-- Heads up settings -->
+    <string name="headsup_settings_title">Peeking notifications</string>
+    <string name="summary_heads_up_enabled">Peeking notifications are enabled</string>
+    <string name="summary_heads_up_disabled">Peeking notifications are disabled</string>
+    <string name="heads_up_disabled_notice">To allow applications to display interactive notifications in a pop-up window on your screen, enable Peeking notifications.</string>
 </resources>
