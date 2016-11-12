@@ -32,8 +32,10 @@ public class VolumeRockerSettings extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener {
 
     private static final String VOLUME_KEY_CURSOR_CONTROL = "volume_key_cursor_control";
+    private static final String SCREENRECORD_CHORD_TYPE = "screenrecord_chord_type";
 
     private ListPreference mVolumeKeyCursorControl;
+    private ListPreference mScreenrecordChordType;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -50,6 +52,11 @@ public class VolumeRockerSettings extends SettingsPreferenceFragment implements
             mVolumeKeyCursorControl.setValue(Integer.toString(volumeRockerCursorControl));
             mVolumeKeyCursorControl.setSummary(mVolumeKeyCursorControl.getEntry());
         }
+        // mScreenrecordChordType
+        int recordChordValue = Settings.System.getInt(resolver,
+                Settings.System.SCREENRECORD_CHORD_TYPE, 0);
+        mScreenrecordChordType = initActionList(SCREENRECORD_CHORD_TYPE,
+                recordChordValue);
     }
 
     @Override
@@ -64,6 +71,10 @@ public class VolumeRockerSettings extends SettingsPreferenceFragment implements
                     .findIndexOfValue(volumeKeyCursorControl);
             mVolumeKeyCursorControl
                     .setSummary(mVolumeKeyCursorControl.getEntries()[volumeKeyCursorControlIndex]);
+            return true;
+        } else if  (preference == mScreenrecordChordType) {
+            handleActionListChange(mScreenrecordChordType, value,
+                    Settings.System.SCREENRECORD_CHORD_TYPE);
             return true;
         }
         return false;
