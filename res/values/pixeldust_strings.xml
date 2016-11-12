@@ -231,4 +231,9 @@
     <string name="powermenu_lockdown">Device lockdown</string>
     <string name="powermenu_voiceassist">Voice Assist</string>
     <string name="powermenu_assist">Assist</string>
+
+    <!-- Screen record chord behavior -->
+    <string name="screen_record_chord_title">Power + volume up behavior</string>
+    <string name="screen_record_chord_screenrecord">Start screen recording</string>
+    <string name="screen_record_chord_selscreenshot">Take screenshot of selectable area</string>
 </resources>
