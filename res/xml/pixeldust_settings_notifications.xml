@@ -13,17 +13,16 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-<PreferenceScreen
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        android:title="@string/navbar_title"
-        xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:title="@string/notifications_title"
+    xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
     <PreferenceScreen
-        android:title="@string/navbar_tuner_title"
-        android:summary="@string/navbar_tuner_summary" >
+            android:title="@string/power_notification_title"
+            android:summary="@string/power_notification_summary">
         <intent android:action="android.intent.action.MAIN"
             android:targetPackage="com.android.systemui"
-            android:targetClass="com.android.systemui.tuner.NavbarActivity" />
+            android:targetClass="com.android.systemui.tuner.PowerNotificationControlsActivity" />
     </PreferenceScreen>
 
 </PreferenceScreen>

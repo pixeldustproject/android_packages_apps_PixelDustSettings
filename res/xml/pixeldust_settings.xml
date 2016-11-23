@@ -61,7 +61,7 @@
 
         <!-- Power Menu -->
         <PreferenceScreen
-            android:key="powermenu__category"
+            android:key="powermenu_category"
             android:title="@string/powermenu_title" 
             android:fragment="com.pixeldust.settings.fragments.PowerMenuSettings"
             android:icon="@drawable/ic_settings_powermenu"/>
@@ -72,6 +72,13 @@
             android:title="@string/recents_title"
             android:fragment="com.pixeldust.settings.fragments.RecentsSettings"
             android:icon="@drawable/ic_settings_recents"/>
+
+        <!-- Notifications -->
+        <PreferenceScreen
+            android:key="notifications_category"
+            android:title="@string/notifications_title"
+            android:fragment="com.pixeldust.settings.fragments.NotificationSettings"
+            android:icon="@drawable/ic_settings_notifications"/>
 
         <!-- Misc -->
         <PreferenceScreen

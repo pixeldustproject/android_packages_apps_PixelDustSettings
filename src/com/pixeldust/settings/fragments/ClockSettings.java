@@ -79,7 +79,7 @@ public class ClockSettings extends SettingsPreferenceFragment
             prefSet.removeAll();
         }
 
-        addPreferencesFromResource(R.xml.pixeldust_clock_settings);
+        addPreferencesFromResource(R.xml.pixeldust_settings_clock);
         prefSet = getPreferenceScreen();
 
         PackageManager pm = getPackageManager();
