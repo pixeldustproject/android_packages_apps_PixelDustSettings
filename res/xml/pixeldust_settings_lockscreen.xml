@@ -31,4 +31,10 @@
         android:summary="@string/lock_clock_font_summary"
         android:persistent="false" />
 
+    <com.pixeldust.settings.preferences.SystemSettingSwitchPreference
+        android:key="lockscreen_charging_current"
+        android:title="@string/lockscreen_charging_current_title"
+        android:summary="@string/lockscreen_charging_current_summary"
+        android:defaultValue="true" />
+
 </PreferenceScreen>
