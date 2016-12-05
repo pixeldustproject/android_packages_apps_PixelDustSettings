@@ -23,6 +23,7 @@ import android.app.Activity;
 import android.content.ContentResolver;
 import android.app.WallpaperManager;
 import android.content.Intent;
+import android.content.res.Resources;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v14.preference.SwitchPreference;
@@ -39,8 +40,10 @@ public class LockScreenSettings extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener {
 
     private static final String LOCK_CLOCK_FONTS = "lock_clock_fonts";
+    private static final String LOCKSCREEN_CHARGING = "lockscreen_charging_current";
 
     private ListPreference mLockClockFonts;
+    private SwitchPreference mLockscreenCharging;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -48,12 +51,23 @@ public class LockScreenSettings extends SettingsPreferenceFragment implements
         addPreferencesFromResource(R.xml.pixeldust_settings_lockscreen);
 
         ContentResolver resolver = getActivity().getContentResolver();
+        final PreferenceScreen prefScreen = getPreferenceScreen();
+        Resources resources = getResources();
 
         mLockClockFonts = (ListPreference) findPreference(LOCK_CLOCK_FONTS);
         mLockClockFonts.setValue(String.valueOf(Settings.System.getInt(
                 resolver, Settings.System.LOCK_CLOCK_FONTS, 4)));
         mLockClockFonts.setSummary(mLockClockFonts.getEntry());
         mLockClockFonts.setOnPreferenceChangeListener(this);
+
+        mLockscreenCharging = (SwitchPreference) findPreference(LOCKSCREEN_CHARGING);
+        if (!resources.getBoolean(R.bool.showCharging)) {
+            prefScreen.removePreference(mLockscreenCharging);
+        } else {
+        mLockscreenCharging.setChecked((Settings.System.getInt(getContentResolver(),
+                Settings.System.LOCKSCREEN_CHARGING_CURRENT, 0) == 1));
+        mLockscreenCharging.setOnPreferenceChangeListener(this);
+        }
     }
 
     public boolean onPreferenceChange(Preference preference, Object newValue) {
@@ -63,6 +77,11 @@ public class LockScreenSettings extends SettingsPreferenceFragment implements
                     Integer.valueOf((String) newValue));
             mLockClockFonts.setValue(String.valueOf(newValue));
             mLockClockFonts.setSummary(mLockClockFonts.getEntry());
+            return true;
+        } else if (preference == mLockscreenCharging) {
+            boolean value = (Boolean) newValue;
+            Settings.System.putInt(getActivity().getContentResolver(),
+                    Settings.System.LOCKSCREEN_CHARGING_CURRENT, value ? 1 : 0);
             return true;
         }
         return false;
