@@ -37,4 +37,11 @@
         android:summary="@string/lockscreen_battery_info_summary"
         android:persistent="false" />
 
+    <SwitchPreference
+        android:key="fingerprint_success_vib"
+        android:title="@string/fprint_sucess_vib_title"
+        android:summary="@string/fprint_sucess_vib_summary"
+        android:defaultValue="true"
+        android:persistent="false" />
+
 </PreferenceScreen>
