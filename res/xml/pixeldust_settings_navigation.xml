@@ -26,4 +26,10 @@
             android:targetClass="com.android.systemui.tuner.NavbarActivity" />
     </PreferenceScreen>
 
+    <com.pixeldust.settings.preferences.SystemSettingSwitchPreference
+        android:key="nav_bar_dynamic"
+        android:title="@string/nav_bar_dynamic_title"
+        android:summary="@string/nav_bar_dynamic_summary"
+        android:defaultValue="false" />
+
 </PreferenceScreen>

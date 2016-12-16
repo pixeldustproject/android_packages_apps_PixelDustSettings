@@ -177,6 +177,8 @@
     <!-- Navbar tuner -->
     <string name="navbar_tuner_title">Navbar tuner</string>
     <string name="navbar_tuner_summary">Customize buttons and layout</string>
+    <string name="nav_bar_dynamic_title">Dynamic navbar color</string>
+    <string name="nav_bar_dynamic_summary">Enable to adapt navbar color to apps primary dark color.Restart your desired app to see effect</string>
 
     <!-- Gestures: navbar double tap to sleep -->
     <string name="double_tap_sleep_nav_bar_title">Double-tap to sleep</string>
