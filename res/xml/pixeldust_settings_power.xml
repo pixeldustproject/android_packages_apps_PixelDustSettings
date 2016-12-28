@@ -39,6 +39,11 @@
             android:defaultValue="false" />
 
          <com.pixeldust.settings.preferences.SystemSettingSwitchPreference
+            android:key="powermenu_onthego_enabled"
+            android:title="@string/powermenu_onthego_title"
+            android:defaultValue="false" />
+
+         <com.pixeldust.settings.preferences.SystemSettingSwitchPreference
             android:key="powermenu_airplane"
             android:title="@string/powermenu_airplane"
             android:defaultValue="true" />
