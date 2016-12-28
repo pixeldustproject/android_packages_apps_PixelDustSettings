@@ -54,6 +54,21 @@
             android:defaultValue="false" />
 
          <com.pixeldust.settings.preferences.SystemSettingSwitchPreference
+            android:key="powermenu_onthego_enabled"
+            android:title="@string/powermenu_onthego_title"
+            android:defaultValue="false" />
+
+         <com.pixeldust.settings.preferences.CustomSeekBarPreference
+            android:key="on_the_go_alpha"
+            android:title="@string/onthego_alpha_title"
+            android:summary="@string/onthego_alpha_summary"
+            android:dependency="powermenu_onthego_enabled"
+            android:defaultValue="50"
+            android:max="100"
+            settings:min="1"
+            settings:units="" />
+
+         <com.pixeldust.settings.preferences.SystemSettingSwitchPreference
             android:key="powermenu_airplane"
             android:title="@string/powermenu_airplane"
             android:defaultValue="true" />

@@ -35,17 +35,23 @@ import com.android.internal.logging.MetricsProto.MetricsEvent;
 import com.android.internal.widget.LockPatternUtils;
 import com.android.settings.SettingsPreferenceFragment;
 import com.pixeldust.settings.preferences.SystemSettingSwitchPreference;
+import com.pixeldust.settings.preferences.CustomSeekBarPreference;
 
 import java.util.Arrays;
 import java.util.ArrayList;
 import java.util.List;
 
-public class PowerMenuSettings extends SettingsPreferenceFragment {
+public class PowerMenuSettings extends SettingsPreferenceFragment implements
+        Preference.OnPreferenceChangeListener {
+
+    private static final String PREF_ON_THE_GO_ALPHA = "on_the_go_alpha";
 
     private static final String POWER_CATEGORY = "power_category";
     private static final String ACTION_CATEGORY = "action_category";
 
     private static final int MY_USER_ID = UserHandle.myUserId();
+
+    private CustomSeekBarPreference mOnTheGoAlphaPref;
 
     @Override
     protected int getMetricsCategory() {
@@ -68,7 +74,24 @@ public class PowerMenuSettings extends SettingsPreferenceFragment {
         if (!lockPatternUtils.isSecure(MY_USER_ID)) {
             prefScreen.removePreference(powerCategory);
         }
+
+        mOnTheGoAlphaPref = (CustomSeekBarPreference) findPreference(PREF_ON_THE_GO_ALPHA);
+        float OTGAlpha = Settings.System.getFloat(getContentResolver(), Settings.System.ON_THE_GO_ALPHA,
+                    0.5f);
+        final int alpha = ((int) (OTGAlpha * 100));
+        mOnTheGoAlphaPref.setValue(alpha);
+        mOnTheGoAlphaPref.setOnPreferenceChangeListener(this);
     }
 
+    @Override
+    public boolean onPreferenceChange(Preference preference, Object newValue) {
+        if (preference == mOnTheGoAlphaPref) {
+            float val = (Integer) newValue;
+            Settings.System.putFloat(getContentResolver(), Settings.System.ON_THE_GO_ALPHA,
+                    val / 100);
+            return true;
+        }
+        return false;
+    }
 
 }
