@@ -32,9 +32,9 @@
         android:persistent="false" />
 
     <com.pixeldust.settings.preferences.SystemSettingSwitchPreference
-        android:key="lockscreen_charging_current"
-        android:title="@string/lockscreen_charging_current_title"
-        android:summary="@string/lockscreen_charging_current_summary"
+        android:key="lockscreen_battery_info"
+        android:title="@string/lockscreen_battery_info_title"
+        android:summary="@string/lockscreen_battery_info_summary"
         android:persistent="false" />
 
 </PreferenceScreen>

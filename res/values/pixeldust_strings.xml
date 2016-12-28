@@ -410,7 +410,7 @@
     <string name="alarm_blocker_warning_title">Proceed with caution</string>
     <string name="alarm_blocker_warning">Blocking alarms have the potential to cause instability, crashes or data loss.</string>
 
-    <!-- Lockscreen charging current indicator  -->
-    <string name="lockscreen_charging_current_title">Lockscreen charging info</string>
-    <string name="lockscreen_charging_current_summary">Display negotiated charger max current and voltage on lockscreen</string>
+    <!-- Lockscreen battery info indicator  -->
+    <string name="lockscreen_battery_info_title">Lockscreen charging info</string>
+    <string name="lockscreen_battery_info_summary">Display additional charging info on lockscreen while charging</string>
 </resources>
