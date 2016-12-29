@@ -18,22 +18,28 @@
 	android:title="@string/misc_title"
         xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
-        <PreferenceScreen
-            android:key="lock_clock"
-            android:title="@string/lockclock_title"
-            android:summary="@string/lockclock_summary"
-            android:persistent="false">
+    <PreferenceScreen
+        android:key="lock_clock"
+        android:title="@string/lockclock_title"
+        android:summary="@string/lockclock_summary"
+        android:persistent="false">
 
-            <intent
-                android:action="android.intent.action.MAIN"
-                android:targetPackage="com.cyanogenmod.lockclock"
-                android:targetClass="com.cyanogenmod.lockclock.preference.Preferences" />
+        <intent
+            android:action="android.intent.action.MAIN"
+            android:targetPackage="com.cyanogenmod.lockclock"
+            android:targetClass="com.cyanogenmod.lockclock.preference.Preferences" />
         </PreferenceScreen>
 
-     <com.pixeldust.settings.preferences.GlobalSettingSwitchPreference
+    <com.pixeldust.settings.preferences.GlobalSettingSwitchPreference
         android:key="wake_when_plugged_or_unplugged"
         android:title="@string/wake_when_plugged_or_unplugged_title"
         android:summary="@string/wake_when_plugged_or_unplugged_summary"
+        android:defaultValue="false" />
+
+    <com.pixeldust.settings.preferences.SystemSettingSwitchPreference
+        android:key="toast_icon"
+        android:title="@string/toast_icon_title"
+        android:summary="@string/toast_icon_summary"
         android:defaultValue="false" />
 
 </PreferenceScreen>
