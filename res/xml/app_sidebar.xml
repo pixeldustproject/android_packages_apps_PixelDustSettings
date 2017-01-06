@@ -58,38 +58,48 @@
         android:defaultValue="0"
         android:dependency="sidebar_enable" />
 
+    <com.pixeldust.settings.preferences.CustomSeekBarPreference
+        android:key="app_sidebar_hide_timeout"
+        android:title="@string/app_sidebar_hide_timeout_title"
+        android:summary="@string/app_sidebar_hide_timeout_summary"
+        android:max="10000"
+        settings:min="0"
+        settings:units="ms"
+        android:defaultValue="3000"
+        android:dependency="sidebar_enable" />
+
     <PreferenceCategory
         android:title="@string/trigger_category" />
 
-    <com.pixeldust.settings.preferences.CustomSeekBarPreference
-        android:key="trigger_width"
-        android:title="@string/trigger_width_title"
-        android:summary="@string/trigger_width_summary"
-        android:defaultValue="4"
-        android:max="64"
-        settings:min="4"
-        settings:units="px"
-        android:dependency="sidebar_enable" />
+        <com.pixeldust.settings.preferences.CustomSeekBarPreference
+            android:key="trigger_width"
+            android:title="@string/trigger_width_title"
+            android:summary="@string/trigger_width_summary"
+            android:defaultValue="4"
+            android:max="64"
+            settings:min="4"
+            settings:units="px"
+            android:dependency="sidebar_enable" />
 
-    <com.pixeldust.settings.preferences.CustomSeekBarPreference
-        android:key="trigger_top"
-        android:title="@string/trigger_top_title"
-        android:summary="@string/trigger_top_summary"
-        android:defaultValue="0"
-        android:max="99"
-        settings:min="0"
-        settings:units="%"
-        android:dependency="sidebar_enable" />
+        <com.pixeldust.settings.preferences.CustomSeekBarPreference
+            android:key="trigger_top"
+            android:title="@string/trigger_top_title"
+            android:summary="@string/trigger_top_summary"
+            android:defaultValue="0"
+            android:max="99"
+            settings:min="0"
+            settings:units="%"
+            android:dependency="sidebar_enable" />
 
-    <com.pixeldust.settings.preferences.CustomSeekBarPreference
-        android:key="trigger_bottom"
-        android:title="@string/trigger_bottom_title"
-        android:summary="@string/trigger_bottom_summary"
-        android:defaultValue="100"
-        android:max="100"
-        settings:min="1"
-        settings:units="%"
-        android:dependency="sidebar_enable"
-        android:persistent="false" />
+        <com.pixeldust.settings.preferences.CustomSeekBarPreference
+            android:key="trigger_bottom"
+            android:title="@string/trigger_bottom_title"
+            android:summary="@string/trigger_bottom_summary"
+            android:defaultValue="100"
+            android:max="100"
+            settings:min="1"
+            settings:units="%"
+            android:dependency="sidebar_enable"
+            android:persistent="false" />
 
 </PreferenceScreen>
