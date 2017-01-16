@@ -18,12 +18,6 @@
     android:title="@string/quicksettings_title"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
-    <com.pixeldust.settings.preferences.SecureSettingSwitchPreference
-        android:key="qs_show_brightness"
-        android:title="@string/qs_brightness_slider_title"
-        android:summary="@string/qs_brightness_slider_summary"
-        android:defaultValue="true"/>
-
     <PreferenceCategory
         android:key="quicksettings_tiles_category"
         android:title="@string/quicksettings_tiles_category">
@@ -57,7 +51,21 @@
 
     </PreferenceCategory>
 
-    <PreferenceCategory android:title="@string/qs_panel_title">
+    <PreferenceCategory
+        android:key="qs_panel"
+        android:title="@string/qs_panel_title">
+
+        <com.pixeldust.settings.preferences.SecureSettingSwitchPreference
+            android:key="qs_show_brightness"
+            android:title="@string/qs_brightness_slider_title"
+            android:summary="@string/qs_brightness_slider_summary"
+            android:defaultValue="true"/>
+
+        <com.pixeldust.settings.preferences.SecureSettingSwitchPreference
+            android:key="lockscreen_qs_disabled"
+            android:title="@string/lockscreen_qs_disabled_title"
+            android:summary="@string/lockscreen_qs_disabled_summary"
+            android:defaultValue="false"/>
 
         <com.pixeldust.settings.preferences.SystemSettingSwitchPreference
             android:key="qs_tile_title_visibility"

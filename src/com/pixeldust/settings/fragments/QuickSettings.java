@@ -50,6 +50,10 @@ import android.view.IWindowManager;
 import com.android.internal.logging.MetricsProto.MetricsEvent;
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
+
+import com.pixeldust.settings.preferences.SecureSettingSwitchPreference;
+import com.pixeldust.settings.preferences.CustomSeekBarPreference;
+
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.util.Locale;
@@ -75,6 +79,8 @@ public class QuickSettings extends SettingsPreferenceFragment implements
     private static final String CUSTOM_HEADER_PROVIDER = "custom_header_provider";
     private static final String CUSTOM_HEADER_BROWSE = "custom_header_browse";
     private static final String KEY_SYSUI_QQS_COUNT = "sysui_qqs_count_key";
+    private static final String PREF_QSLOCK = "lockscreen_qs_disabled";
+    private static final String QS_CAT = "qs_panel";
 
     private ListPreference mTileAnimationStyle;
     private ListPreference mTileAnimationDuration;
@@ -86,12 +92,25 @@ public class QuickSettings extends SettingsPreferenceFragment implements
     private String mDaylightHeaderProvider;
     private PreferenceScreen mHeaderBrowse;
     private CustomSeekBarPreference mSysuiQqsCount;
+    private SecureSettingSwitchPreference mQsLock;
+
+    private static final int MY_USER_ID = UserHandle.myUserId();
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         addPreferencesFromResource(R.xml.pixeldust_settings_quicksettings);
+        ContentResolver resolver = getActivity().getContentResolver();
+        PreferenceScreen prefScreen = getPreferenceScreen();
+        final LockPatternUtils lockPatternUtils = new LockPatternUtils(getActivity());
+
+        PreferenceCategory qscat = (PreferenceCategory) findPreference(QS_CAT);
+
+        mQsLock = (SecureSettingSwitchPreference) prefScreen.findPreference(PREF_QSLOCK);
+        if (!lockPatternUtils.isSecure(MY_USER_ID)) {
+            qscat.removePreference(mQsLock);
+        }
 
         mTileAnimationStyle = (ListPreference) findPreference(PREF_TILE_ANIM_STYLE);
         int tileAnimationStyle = Settings.System.getIntForUser(getContentResolver(),
