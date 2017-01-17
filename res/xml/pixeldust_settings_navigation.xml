@@ -32,4 +32,10 @@
         android:summary="@string/nav_bar_dynamic_summary"
         android:defaultValue="false" />
 
+    <com.pixeldust.settings.preferences.SecureSettingSwitchPreference
+        android:key="one_handed_mode_ui"
+        android:title="@string/one_handed_mode_title"
+        android:summary="@string/one_handed_mode_summary"
+        android:defaultValue="false" />
+
 </PreferenceScreen>
