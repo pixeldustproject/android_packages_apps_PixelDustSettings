@@ -208,6 +208,10 @@
     <string name="pixel_navbar_anim_title">Pixel navbar animation</string>
     <string name="pixel_navbar_anim_summary">Enables the pixel navbar animation</string>
 
+    <!-- One handed mode -->
+    <string name="one_handed_mode_title">One Handed mode</string>
+    <string name="one_handed_mode_summary">Allows swiping on the navigation bar to enable one handed mode</string>
+
     <!-- Screen record chord behavior -->
     <string name="screen_record_chord_title">Power + volume up behavior</string>
     <string name="screen_record_chord_screenrecord">Start screen recording</string>
