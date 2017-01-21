@@ -670,4 +670,10 @@
     <string name="pie_gravity_bottom">Unten</string>
     <string name="pie_gravity_right">Rechts</string>
     <string name="pie_gravity_left">Links</string>
+
+    <!-- Light/Dark theme -->
+    <string name="night_mode_title">Theme</string>
+    <string name="night_mode_summary">%s</string>
+    <string name="night_mode_no">Hell</string>
+    <string name="night_mode_yes">Dunkel</string>
 </resources>

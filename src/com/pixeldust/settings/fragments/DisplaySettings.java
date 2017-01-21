@@ -16,25 +16,31 @@
 
 package com.pixeldust.settings.fragments;
 
+import android.app.UiModeManager;
+import android.content.Context;
 import android.os.Bundle;
+import android.support.v7.preference.ListPreference;
 import android.support.v7.preference.Preference;
 import android.support.v7.preference.PreferenceCategory;
 import android.support.v7.preference.PreferenceScreen;
 
 import com.android.internal.logging.MetricsProto.MetricsEvent;
-
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 
-public class DisplaySettings extends SettingsPreferenceFragment {
+public class DisplaySettings extends SettingsPreferenceFragment implements
+        Preference.OnPreferenceChangeListener {
 
     private static final String KEY_NOTIFICATION_LIGHT = "notification_light";
     private static final String KEY_BATTERY_LIGHT = "battery_light";
 
     private static final String CATEGORY_LEDS = "leds";
 
+    private static final String KEY_NIGHT_MODE = "night_mode";
+
     private Preference mNotifLedFrag;
     private Preference mBattLedFrag;
+    private ListPreference mNightModePreference;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -65,11 +71,35 @@ public class DisplaySettings extends SettingsPreferenceFragment {
                 com.android.internal.R.bool.config_intrusiveBatteryLed)) {
             prefScreen.removePreference(findPreference(CATEGORY_LEDS));
         }
+
+        //Light/Dark theme
+        mNightModePreference = (ListPreference) findPreference(KEY_NIGHT_MODE);
+        if (mNightModePreference != null) {
+            final UiModeManager uiManager = (UiModeManager) getSystemService(
+                    Context.UI_MODE_SERVICE);
+            final int currentNightMode = uiManager.getNightMode();
+            mNightModePreference.setValue(String.valueOf(currentNightMode));
+            mNightModePreference.setOnPreferenceChangeListener(this);
+        }
     }
 
     @Override
     protected int getMetricsCategory() {
         return MetricsEvent.PIXELDUST;
+    }
+
+    @Override
+    public boolean onPreferenceChange(Preference preference, Object newValue) {
+        if (preference == mNightModePreference) {
+            try {
+                final int value = Integer.parseInt((String) newValue);
+                final UiModeManager uiManager = (UiModeManager) getSystemService(
+                        Context.UI_MODE_SERVICE);
+                uiManager.setNightMode(value);
+            } catch (NumberFormatException e) {
+            }
+        }
+        return true;
     }
 }
 

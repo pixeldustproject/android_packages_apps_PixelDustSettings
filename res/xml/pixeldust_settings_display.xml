@@ -16,6 +16,14 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
+    <ListPreference
+        android:key="night_mode"
+        android:title="@string/night_mode_title"
+        settings:keywords="@string/keywords_display_night_mode"
+        android:summary="@string/night_mode_summary"
+        android:entries="@array/night_mode_entries"
+        android:entryValues="@array/night_mode_values" />
+
     <com.pixeldust.settings.preferences.GlobalSettingSwitchPreference
         android:key="wake_when_plugged_or_unplugged"
         android:title="@string/wake_when_plugged_or_unplugged_title"

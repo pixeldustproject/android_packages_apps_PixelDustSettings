@@ -998,4 +998,10 @@
     <string name="pie_gravity_bottom">Bottom</string>
     <string name="pie_gravity_right">Right</string>
     <string name="pie_gravity_left">Left</string>
+
+    <!-- Light/Dark theme -->
+    <string name="night_mode_title">Theme</string>
+    <string name="night_mode_summary">%s</string>
+    <string name="night_mode_no">Light</string>
+    <string name="night_mode_yes">Dark</string>
 </resources>
