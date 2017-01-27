@@ -53,6 +53,9 @@ public class StatusBarSettings extends SettingsPreferenceFragment implements
     private static final String PREF_STATUS_BAR_WEATHER = "status_bar_weather";
     private static final String PREF_CATEGORY_WEATHER = "pref_cat_weather";
     private static final String WEATHER_SERVICE_PACKAGE = "org.omnirom.omnijaws";
+    private static final String STATUS_BAR_SHOW_TICKER = "status_bar_show_ticker"
+
+    private SwitchPreference mShowTicker;
     private ListPreference mStatusBarWeather;
 
     @Override
@@ -81,6 +84,12 @@ public class StatusBarSettings extends SettingsPreferenceFragment implements
             }
             mStatusBarWeather.setOnPreferenceChangeListener(this);
         }
+        // Notification ticker
+        mShowTicker = (SwitchPreference) findPreference(STATUS_BAR_SHOW_TICKER);
+        mShowTicker.setOnPreferenceChangeListener(this);
+        int ShowTicker = Settings.System.getInt(resolver,
+                STATUS_BAR_SHOW_TICKER, 0);
+        mShowTicker.setChecked(ShowTicker != 0);
     }
 
     @Override
@@ -98,6 +107,11 @@ public class StatusBarSettings extends SettingsPreferenceFragment implements
                 mStatusBarWeather.setSummary(
                 mStatusBarWeather.getEntries()[index]);
             }
+            return true;
+        } else if (preference == mShowTicker) {
+            boolean value = (Boolean) newValue;
+            Settings.Global.putInt(getContentResolver(), STATUS_BAR_SHOW_TICKER,
+                    value ? 1 : 0);
             return true;
         }
         return false;
