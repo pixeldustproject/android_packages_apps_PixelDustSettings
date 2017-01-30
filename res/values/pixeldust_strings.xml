@@ -207,9 +207,16 @@
     <!-- Navbar Animation -->
     <string name="pixel_navbar_anim_title">Pixel navbar animation</string>
     <string name="pixel_navbar_anim_summary">Enables the pixel navbar animation</string>
-    <!-- Navbar double tap to sleep -->
-    <string name="double_tap_sleep_nav_bar_title">Double-tap to sleep</string>
-    <string name="double_tap_sleep_nav_bar_summary">Double tap on the navigation bar to put the device to sleep</string>
+
+    <!-- Navbar double-tap to sleep -->
+    <string name="double_tap_sleep_nav_bar_title">Navbar double-tap to sleep</string>
+    <string name="double_tap_sleep_nav_bar_summary">Double-tap on the navigation bar to put the device to sleep</string>
+    <!-- Lockscreen double-tap to sleep -->
+    <string name="double_tap_sleep_anywhere_title">Lockscreen double-tap to sleep</string>
+    <string name="double_tap_sleep_anywhere_summary">Double-tap anywhere on the lockscreen to put the device to sleep</string>
+    <!-- Statusbar double-tap to sleep -->
+    <string name="double_tap_to_sleep_title">Statusbar double-tap to sleep</string>
+<string name="double_tap_to_sleep_summary">Double-tap on the status bar to put the device to sleep</string>
 
     <!-- One handed mode -->
     <string name="one_handed_mode_title">One Handed mode</string>
