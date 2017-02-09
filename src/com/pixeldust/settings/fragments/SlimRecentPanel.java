@@ -86,6 +86,8 @@ public class SlimRecentPanel extends SettingsPreferenceFragment implements
             "recent_panel_bg_color";
     private static final String RECENT_CARD_BG_COLOR =
             "recent_card_bg_color";
+    private static final String APP_SIDEBAR_CONTENT =
+            "recent_app_sidebar_content";
 
     private final static String[] sSupportedActions = new String[] {
         "org.adw.launcher.THEMES",
@@ -107,6 +109,7 @@ public class SlimRecentPanel extends SettingsPreferenceFragment implements
     private ListPreference mRecentPanelExpandedMode;
     private ColorPickerPreference mRecentPanelBgColor;
     private ColorPickerPreference mRecentCardBgColor;
+    private Preference mAppSidebarContent;
 
     private AlertDialog mDialog;
     private ListView mListView;
@@ -299,6 +302,9 @@ public class SlimRecentPanel extends SettingsPreferenceFragment implements
         mRecentPanelExpandedMode =
                 (ListPreference) findPreference(RECENT_PANEL_EXPANDED_MODE);
         mRecentPanelExpandedMode.setOnPreferenceChangeListener(this);
+
+        // Recent app sidebar
+        mAppSidebarContent = findPreference(APP_SIDEBAR_CONTENT);
     }
 
     @Override
@@ -310,6 +316,10 @@ public class SlimRecentPanel extends SettingsPreferenceFragment implements
     public boolean onPreferenceTreeClick(Preference preference) {
         if (preference == findPreference("slim_icon_pack")) {
             pickIconPack(getContext());
+            return true;
+        } else if (preference == mAppSidebarContent) {
+            Intent intent = new Intent(getActivity(), SlimRecentAppSidebarActivity.class);
+            getActivity().startActivity(intent);
             return true;
         }
         return super.onPreferenceTreeClick(preference);

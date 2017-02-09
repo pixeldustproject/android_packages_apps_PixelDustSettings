@@ -75,5 +75,21 @@
             android:title="@string/slim_icon_pack_title"
             android:summary="@string/slim_icon_pack_summary" />
 
+        <PreferenceCategory
+            android:title="@string/recent_app_sidebar_title">
+
+            <com.pixeldust.settings.preferences.SystemSettingSwitchPreference
+                android:key="use_recent_app_sidebar"
+                android:title="@string/use_recent_app_sidebar_title"
+                android:summary="@string/use_recent_app_sidebar_summary"
+                android:defaultValue="true" />
+
+            <Preference
+                    android:key="recent_app_sidebar_content"
+                    android:title="@string/recent_app_sidebar_content_title"
+                    android:summary="@string/recent_app_sidebar_content_summary"
+                    android:dependency="use_recent_app_sidebar" />
+
+        </PreferenceCategory>
 
 </PreferenceScreen>
