@@ -90,6 +90,13 @@
                     android:summary="@string/recent_app_sidebar_content_summary"
                     android:dependency="use_recent_app_sidebar" />
 
+            <PreferenceScreen
+                    android:key="recent_app_sidebar"
+                    android:title="@string/recent_app_sidebar_style_title"
+                    android:fragment="com.pixeldust.settings.fragments.RecentAppSidebar"
+                    android:summary="@string/recent_app_sidebar_style_summary"
+                    android:dependency="use_recent_app_sidebar" />
+
         </PreferenceCategory>
 
 </PreferenceScreen>
