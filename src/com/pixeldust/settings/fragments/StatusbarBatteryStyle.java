@@ -55,7 +55,6 @@ public class StatusbarBatteryStyle extends SettingsPreferenceFragment implements
 
     private static final String STATUS_BAR_BATTERY_STYLE = "status_bar_battery_style";
     private static final String STATUS_BAR_SHOW_BATTERY_PERCENT = "status_bar_show_battery_percent";
-    private static final String STATUS_BAR_BATTERY_STYLE_TILE = "status_bar_battery_style_tile";
     private static final String STATUS_BAR_CHARGE_COLOR = "status_bar_charge_color";
     private static final String FORCE_CHARGE_BATTERY_TEXT = "force_charge_battery_text";
     private static final String TEXT_CHARGING_SYMBOL = "text_charging_symbol";
@@ -70,7 +69,6 @@ public class StatusbarBatteryStyle extends SettingsPreferenceFragment implements
     private ListPreference mStatusBarBatteryShowPercent;
     private int mStatusBarBatteryValue;
     private int mStatusBarBatteryShowPercentValue;
-    private SwitchPreference mQsBatteryTitle;
     private SwitchPreference mForceChargeBatteryText;
     private ListPreference mTextChargingSymbol;
     private int mTextChargingSymbolValue;
@@ -87,11 +85,6 @@ public class StatusbarBatteryStyle extends SettingsPreferenceFragment implements
 
         PreferenceScreen prefScreen = getPreferenceScreen();
         ContentResolver resolver = getActivity().getContentResolver();
-
-        mQsBatteryTitle = (SwitchPreference) findPreference(STATUS_BAR_BATTERY_STYLE_TILE);
-        mQsBatteryTitle.setChecked((Settings.Secure.getInt(resolver,
-                Settings.Secure.STATUS_BAR_BATTERY_STYLE_TILE, 1) == 1));
-        mQsBatteryTitle.setOnPreferenceChangeListener(this);
 
         mForceChargeBatteryText = (SwitchPreference) findPreference(FORCE_CHARGE_BATTERY_TEXT);
         mForceChargeBatteryText.setChecked((Settings.Secure.getInt(resolver,
@@ -155,11 +148,6 @@ public class StatusbarBatteryStyle extends SettingsPreferenceFragment implements
                     Settings.Secure.STATUS_BAR_SHOW_BATTERY_PERCENT, mStatusBarBatteryShowPercentValue);
             enableStatusBarBatteryDependents();
             return true;
-        } else if  (preference == mQsBatteryTitle) {
-            boolean checked = ((SwitchPreference)preference).isChecked();
-            Settings.Secure.putInt(resolver,
-                    Settings.Secure.STATUS_BAR_BATTERY_STYLE_TILE, checked ? 1:0);
-            return true;
         } else if  (preference == mForceChargeBatteryText) {
             boolean checked = ((SwitchPreference)preference).isChecked();
             Settings.Secure.putInt(resolver,
@@ -185,25 +173,21 @@ public class StatusbarBatteryStyle extends SettingsPreferenceFragment implements
     private void enableStatusBarBatteryDependents() {
         if (mStatusBarBatteryValue == STATUS_BAR_BATTERY_STYLE_HIDDEN) {
             mStatusBarBatteryShowPercent.setEnabled(false);
-            mQsBatteryTitle.setEnabled(false);
             mForceChargeBatteryText.setEnabled(false);
             mChargeColor.setEnabled(false);
             mTextChargingSymbol.setEnabled(false);
         } else if (mStatusBarBatteryValue == STATUS_BAR_BATTERY_STYLE_TEXT) {
             mStatusBarBatteryShowPercent.setEnabled(false);
-            mQsBatteryTitle.setEnabled(false);
             mForceChargeBatteryText.setEnabled(false);
             mChargeColor.setEnabled(false);
             mTextChargingSymbol.setEnabled(true);
         } else if (mStatusBarBatteryValue == STATUS_BAR_BATTERY_STYLE_PORTRAIT) {
             mStatusBarBatteryShowPercent.setEnabled(true);
-            mQsBatteryTitle.setEnabled(false);
             mChargeColor.setEnabled(true);
             mForceChargeBatteryText.setEnabled(mStatusBarBatteryShowPercentValue == 2 ? false : true);
             mTextChargingSymbol.setEnabled(true);
         } else {
             mStatusBarBatteryShowPercent.setEnabled(true);
-            mQsBatteryTitle.setEnabled(true);
             mChargeColor.setEnabled(true);
             mForceChargeBatteryText.setEnabled(mStatusBarBatteryShowPercentValue == 2 ? false : true);
             mTextChargingSymbol.setEnabled(true);

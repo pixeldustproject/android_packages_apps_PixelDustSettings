@@ -58,10 +58,4 @@
         android:entryValues="@array/text_charging_symbol_values"
         android:defaultValue="0" />
 
-    <com.pixeldust.settings.preferences.SystemSettingSwitchPreference
-        android:key="status_bar_battery_style_tile"
-        android:title="@string/status_bar_battery_style_tile_title"
-        android:summary="@string/status_bar_battery_style_tile_summary"
-        android:defaultValue="true" />
-
 </PreferenceScreen>
