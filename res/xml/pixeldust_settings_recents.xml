@@ -40,4 +40,24 @@
         android:defaultValue="3"
         android:dependency="show_clear_all_recents" />
 
+    <PreferenceCategory
+        android:key="slim_recents"
+        android:title="@string/slim_recents_title">
+
+        <com.pixeldust.settings.preferences.SystemSettingSwitchPreference
+            android:key="use_slim_recents"
+            android:title="@string/use_slim_recents_title"
+            android:summary="@string/use_slim_recents_summary"
+            android:defaultValue="false" />
+
+        <PreferenceScreen
+            android:key="slim_recent_panel"
+            android:fragment="com.pixeldust.settings.fragments.SlimRecentPanel"
+            android:title="@string/slim_recents_settings_title"
+            android:summary="@string/slim_recents_settings_summary"
+            android:dependency="use_slim_recents"
+            android:persistent="false" />
+
+    </PreferenceCategory>
+
 </PreferenceScreen>
