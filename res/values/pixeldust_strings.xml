@@ -301,6 +301,10 @@
     <string name="heads_up_snooze_15min">15 minutes</string>
     <string name="heads_up_snooze_20min">20 minutes</string>
 
+    <!-- Global heads-up toggle -->
+    <string name="heads_up_notifications_enabled_title">Allow peeking</string>
+    <string name="heads_up_notifications_enabled_summary">Allow or disable peeking for all notifications</string>
+
     <!-- Quicksettings Tiles -->
     <string name="qs_panel_title">Quick settings panel</string>
     <!-- Tiles animation style & animation interpolator -->

@@ -27,17 +27,24 @@
 
     <!-- Heads up -->
     <Preference
-            android:key="heads_up_notifications"
-            android:title="@string/heads_up_notifications"
-            android:fragment="com.pixeldust.settings.fragments.HeadsUpSettings" />
+        android:key="heads_up_notifications"
+        android:title="@string/heads_up_notifications"
+        android:fragment="com.pixeldust.settings.fragments.HeadsUpSettings" />
+
+    <!-- Global heads-up toggle -->
+    <com.pixeldust.settings.preferences.SystemSettingSwitchPreference
+        android:key="heads_up_notifications_user_enabled"
+        android:title="@string/heads_up_notifications_enabled_title"
+        android:summary="@string/heads_up_notifications_enabled_summary"
+        android:defaultValue="true" />
 
     <!-- Toast_animation -->
     <ListPreference
-            android:key="toast_animation"
-            android:title="@string/toast_animation_title"
-            android:entries="@array/toast_animation_entries"
-            android:entryValues="@array/toast_animation_values"
-            android:persistent="false" />
+        android:key="toast_animation"
+        android:title="@string/toast_animation_title"
+        android:entries="@array/toast_animation_entries"
+        android:entryValues="@array/toast_animation_values"
+        android:persistent="false" />
 
     <!-- Toast color options -->
     <net.margaritov.preference.colorpicker.ColorPickerPreference
