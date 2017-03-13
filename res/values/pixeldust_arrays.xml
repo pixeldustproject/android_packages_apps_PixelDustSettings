@@ -924,6 +924,7 @@
         <item>@string/hardware_keys_action_split_screen</item>
         <item>@string/hardware_keys_action_one_handed_mode_left</item>
         <item>@string/hardware_keys_action_one_handed_mode_right</item>
+        <item>@string/hardware_keys_action_screen_off</item>
     </string-array>
 
     <string-array name="hardware_keys_action_values" translatable="false">
@@ -939,6 +940,7 @@
         <item>9</item>
         <item>10</item>
         <item>11</item>
+        <item>12</item>
     </string-array>
 
     <!-- long press back to kill configurable timeout -->
