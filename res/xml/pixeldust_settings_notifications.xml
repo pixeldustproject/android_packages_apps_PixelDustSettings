@@ -39,5 +39,15 @@
             android:entryValues="@array/toast_animation_values"
             android:persistent="false" />
 
+    <!-- Toast color options -->
+    <net.margaritov.preference.colorpicker.ColorPickerPreference
+        android:key="toast_icon_color"
+        android:title="@string/toast_icon_color"
+        android:defaultValue="0xffffffff" />
+
+    <net.margaritov.preference.colorpicker.ColorPickerPreference
+        android:key="toast_text_color"
+        android:title="@string/toast_text_color"
+        android:defaultValue="0xffffffff" />
 
 </PreferenceScreen>
