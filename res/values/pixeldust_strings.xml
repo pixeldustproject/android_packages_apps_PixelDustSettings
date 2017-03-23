@@ -29,14 +29,14 @@
 
     <!-- Color picker -->
     <string name="dialog_color_picker">Color picker</string>
-    <string name="press_color_to_apply">Press on Color to apply</string>
+    <string name="press_color_to_apply">Press on color to apply</string>
     <string name="hex">Hex:</string>
     <string name="hex_hint" translatable="false">#FFDDDDDD</string>
     <string name="hex_check_button_text">PREVIEW</string>
     <string name="hex_reset_button_text">RESET</string>
     <string name="color_right_arrow" translatable="false">"→"</string>
     <string name="color_down_arrow" translatable="false">"↓"</string>
-    <string name="longpress_info">Longpress box to save color</string>
+    <string name="longpress_info">Long press box to save color</string>
     <string name="arrow_right">→</string>
     <string name="arrow_down">↓</string>
     <string name="color_default">Default</string>
@@ -94,7 +94,7 @@
     <string name="status_bar_battery_percentage_low_only_title">Percent only when battery is low</string>
     <string name="status_bar_battery_percentage_low_only_summary">Show battery percentage only when the battery level is under %1$d%%</string>
     <string name="status_bar_charge_color_title">Status bar battery icon charging color</string>
-    <string name="status_bar_charge_color_summary">Set the color of the statusbar battery icon while charging</string>
+    <string name="status_bar_charge_color_summary">Set the color of the status bar battery icon while charging</string>
     <string name="force_charge_battery_text_title">Status bar battery charging percent</string>
     <string name="force_charge_battery_text_summary_on">Show the battery percentage outside the icon while charging</string>
     <string name="force_charge_battery_text_summary_off">Show the battery percentage inside the icon while charging</string>
@@ -105,7 +105,7 @@
     <string name="text_charging_symbol_tilde">Tilde</string>
 
     <!-- Statusbar Clock -->
-    <string name="status_bar_clock_title">Clock and Date settings</string>
+    <string name="status_bar_clock_title">Clock and date settings</string>
     <string name="status_bar_clock_style_title">Clock style</string>
     <string name="status_bar_clock_style_right">Right</string>
     <string name="status_bar_clock_style_left">Left</string>
@@ -178,21 +178,21 @@
     <!-- Navbar tuner -->
     <string name="navbar_tuner_title">Navbar tuner</string>
     <string name="navbar_tuner_summary">Customize buttons and layout</string>
-    <string name="nav_bar_dynamic_title">Dynamic navbar color</string>
-    <string name="nav_bar_dynamic_summary">Enable to adapt navbar color to apps primary dark color.Restart your desired app to see effect</string>
+    <string name="nav_bar_dynamic_title">Dynamic navigation bar color</string>
+    <string name="nav_bar_dynamic_summary">Enable to adapt navigation bar color to apps primary dark color.Restart your desired app to see effect</string>
 
     <!-- Gestures: navbar double tap to sleep -->
-    <string name="double_tap_sleep_nav_bar_title">Double-tap to sleep</string>
+    <string name="double_tap_sleep_nav_bar_title">Double tap to sleep</string>
     <string name="double_tap_sleep_nav_bar_summary">Double tap on the navigation bar to put the device to sleep</string>
     <!-- Lockscreen double-tap to sleep -->
-    <string name="double_tap_sleep_anywhere_title">Lockscreen double-tap to sleep</string>
-    <string name="double_tap_sleep_anywhere_summary">Double-tap anywhere on the lockscreen to put the device to sleep</string>
+    <string name="double_tap_sleep_anywhere_title">Lock screen double tap to sleep</string>
+    <string name="double_tap_sleep_anywhere_summary">Double tap anywhere on the lock screen to put the device to sleep</string>
     <!-- Statusbar double-tap to sleep -->
-    <string name="double_tap_to_sleep_title">Statusbar double-tap to sleep</string>
-<string name="double_tap_to_sleep_summary">Double-tap on the status bar to put the device to sleep</string>
+    <string name="double_tap_to_sleep_title">Status bar double tap to sleep</string>
+<string name="double_tap_to_sleep_summary">Double tap on the status bar to put the device to sleep</string>
 
     <!-- Lockscreen weather -->
-    <string name="display_category_weather_title">Lockscreen weather options</string>
+    <string name="display_category_weather_title">Lock screen weather options</string>
     <string name="lock_screen_weather_settings_title">Weather</string>
     <string name="weather_cat_notifications_title">Notifications</string>
     <string name="weather_show_weather_title">Show weather</string>
@@ -221,8 +221,8 @@
     <string name="weather_number_of_notifications_title">Number of notifications</string>
 
     <!-- Lockscreen clock fonts -->
-    <string name="lock_clock_font_title">Lockscreen clock font</string>
-    <string name="lock_clock_font_summary">Change the default font of the lockscreen clock widget</string>
+    <string name="lock_clock_font_title">Lock screen clock font</string>
+    <string name="lock_clock_font_summary">Change the default font of the lock screen clock widget</string>
     <string name="lock_clock_font_normal">Roboto</string>
     <string name="lock_clock_font_bold">Roboto Bold</string>
     <string name="lock_clock_font_italic">Roboto Italic</string>
@@ -247,7 +247,7 @@
     <string name="powermenu_screenshot">Screenshot</string>
     <string name="powermenu_screenrecord">Screen record</string>
     <string name="powermenu_torch">Flashlight</string>
-    <string name="powermenu_onthego_title">On-The-Go Mode</string>
+    <string name="powermenu_onthego_title">On-The-Go mode</string>
     <string name="powermenu_airplane">Airplane mode</string>
     <string name="powermenu_soundpanel">Sound panel</string>
     <string name="powermenu_users">User switcher</string>
@@ -298,7 +298,7 @@
     <string name="heads_up_snooze_20min">20 minutes</string>
 
     <!-- Wakelock blocker -->
-    <string name="wakelock_blocker_title">Wakelock Blocker</string>
+    <string name="wakelock_blocker_title">Wakelock blocker</string>
     <string name="wakelock_blocker_summary">Block system wakelocks</string>
     <string name="wakelock_blocker_save">Save</string>
     <string name="wakelock_list_header">Available wakelocks</string>
@@ -366,11 +366,11 @@
     <string name="network_traffic_hidearrow_summary">Hide the traffic monitor activity arrows</string>
 
     <!-- One handed mode -->
-    <string name="one_handed_mode_title">One Handed mode</string>
+    <string name="one_handed_mode_title">One handed mode</string>
     <string name="one_handed_mode_summary">Allows swiping on the navigation bar to enable one handed mode</string>
 
     <!-- Wakelock blocker -->
-    <string name="wakelock_blocker_title">Wakelock Blocker</string>
+    <string name="wakelock_blocker_title">Wakelock blocker</string>
     <string name="wakelock_blocker_summary">Block system wakelocks</string>
     <string name="wakelock_blocker_save">Save</string>
     <string name="wakelock_list_header">Available wakelocks</string>
@@ -412,7 +412,7 @@
     <string name="alarm_blocker_warning">Blocking alarms have the potential to cause instability, crashes or data loss.</string>
 
     <!-- Lockscreen battery info indicator  -->
-    <string name="lockscreen_battery_info_title">Lockscreen charging info</string>
+    <string name="lockscreen_battery_info_title">Lock screen charging info</string>
     <string name="lockscreen_battery_info_summary">Display additional charging info on lockscreen while charging</string>
 
     <!-- Recent clear all button and location -->
@@ -427,11 +427,11 @@
     <string name="recents_clear_all_location_bottom_left">Bottom left</string>
     <string name="recents_clear_all_location_bottom_center">Bottom center</string>
     <!-- Immersive recents -->
-    <string name="immersive_recents_title">Immersive Recents</string>
+    <string name="immersive_recents_title">Immersive recents</string>
     <string name="immersive_recents_default">Default</string>
     <string name="immersive_recents_fullscreen">Fullscreen</string>
-    <string name="immersive_recents_statusbar">Statusbar only</string>
-    <string name="immersive_recents_navbar">Navbar only</string>
+    <string name="immersive_recents_statusbar">Status bar only</string>
+    <string name="immersive_recents_navbar">Navigation bar only</string>
 
     <!-- Slim Recent panel -->
     <string name="slim_recents_title">Slim recents</string>
