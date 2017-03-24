@@ -49,20 +49,6 @@
             android:summary="@string/recent_panel_show_topmost_summary"
             android:defaultValue="false" />
 
-        <com.pixeldust.settings.preferences.SystemSettingSwitchPreference
-            android:key="slim_recents_mem_display"
-            android:title="@string/systemui_recents_mem_display_title"
-            android:summaryOn="@string/systemui_recents_mem_display_summaryOn"
-            android:summaryOff="@string/systemui_recents_mem_display_summaryOff"
-            android:defaultValue="false" />
-
-        <com.pixeldust.settings.preferences.SystemSettingSwitchPreference
-            android:key="slim_recents_mem_display_long_click_clear"
-            android:title="@string/slim_recents_mem_display_long_click_clear_title"
-            android:summary="@string/slim_recents_mem_display_long_click_clear_summary"
-            android:defaultValue="false"
-            android:dependency="slim_recents_mem_display" />
-
         <com.pixeldust.settings.preferences.CustomSeekBarPreference
             android:key="recent_panel_scale"
             android:title="@string/recent_panel_scale_title"
@@ -83,6 +69,32 @@
             android:title="@string/recent_card_bg_color_title"
             defaultColor="#00ffffff"
             alphaSlider="true" />
+
+        <com.pixeldust.settings.preferences.SystemSettingSwitchPreference
+            android:key="slim_recents_mem_display"
+            android:title="@string/systemui_recents_mem_display_title"
+            android:summaryOn="@string/systemui_recents_mem_display_summaryOn"
+            android:summaryOff="@string/systemui_recents_mem_display_summaryOff"
+            android:defaultValue="false" />
+
+        <com.pixeldust.settings.preferences.SystemSettingSwitchPreference
+            android:key="slim_recents_mem_display_long_click_clear"
+            android:title="@string/slim_recents_mem_display_long_click_clear_title"
+            android:summary="@string/slim_recents_mem_display_long_click_clear_summary"
+            android:defaultValue="false"
+            android:dependency="slim_recents_mem_display" />
+
+    	<net.margaritov.preference.colorpicker.ColorPickerPreference
+            android:key="slim_mem_bar_color"
+            android:title="@string/mem_bar_color"
+            android:defaultValue="0xffffffff" 
+            android:dependency="slim_recents_mem_display"/>
+
+    	<net.margaritov.preference.colorpicker.ColorPickerPreference
+            android:key="slim_mem_text_color"
+            android:title="@string/mem_text_color"
+            android:defaultValue="0xffffffff" 
+            android:dependency="slim_recents_mem_display"/>
 
         <Preference
             android:key="slim_icon_pack"

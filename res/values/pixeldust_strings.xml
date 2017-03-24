@@ -509,6 +509,8 @@
     <string name="systemui_recents_mem_display_summaryOff">RAM bar disabled</string>
     <string name="slim_recents_mem_display_long_click_clear_title">Memory bar longpress</string>
     <string name="slim_recents_mem_display_long_click_clear_summary">Clear recents by long pressing the memory bar</string>
+    <string name="mem_bar_color">Memory bar</string>
+    <string name="mem_text_color">Membar text</string>
 
     <!-- Slim DSLV -->
     <string name="shortcut_action_none">None</string>
