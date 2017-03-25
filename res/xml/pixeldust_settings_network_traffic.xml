@@ -29,14 +29,12 @@
         <SwitchPreference
                 android:key="network_traffic_hidearrow"
                 android:title="@string/network_traffic_hidearrow_title"
-                android:summary="@string/network_traffic_hidearrow_summary"
-                android:defaultValue="true" />
+                android:summary="@string/network_traffic_hidearrow_summary" />
 
         <SwitchPreference
                 android:key="network_traffic_autohide"
                 android:title="@string/network_traffic_autohide"
-                android:summary="@string/network_traffic_autohide_summary"
-                android:defaultValue="true" />
+                android:summary="@string/network_traffic_autohide_summary" />
 
         <com.pixeldust.settings.preferences.CustomSeekBarPreference
                 android:key="network_traffic_autohide_threshold"
