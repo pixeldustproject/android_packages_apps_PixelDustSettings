@@ -1,0 +1,527 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2017 The PixelDust Project
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+          http://www.apache.org/licenses/LICENSE-2.0
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- Categories -->
+    <string name="display_settings_title">Display &amp; LED</string>
+    <string name="button_title">Tastenbelegungen</string>
+    <string name="gestures_title">Bildschirmgesten</string>
+    <string name="lockscreen_title">Sperrbildschirm</string>
+    <string name="misc_title">Verschiedenes</string>
+    <string name="navbar_title">Navigationsleiste</string>
+    <string name="powermenu_title">Power-Menü</string>
+    <string name="quicksettings_title">Schnelleinstellungen</string>
+    <string name="recents_title">Appverlauf</string>
+    <string name="statusbar_title">Statusleiste</string>
+    <string name="notifications_title">Benachrichtigungen</string>
+
+    <!-- Battery customizations -->
+    <string name="battery_title">Akku-Anzeige</string>
+    <string name="status_bar_charge_color_title">Farbe des Akkustandsymbols beim Laden</string>
+    <string name="status_bar_charge_color_summary">Farbe des Akkustandsymbols in der Statuszeile beim Laden festlegen</string>
+    <string name="force_charge_battery_text_title">Prozentsatz des Akkustands in der Statuszeile anzeigen</string>
+    <string name="force_charge_battery_text_summary_on">Beim Laden den Prozentsatz neben dem Akkustandsymbol anzeigen</string>
+    <string name="force_charge_battery_text_summary_off">Beim Laden den Prozentsatz innerhalb des Akkustandsymbols anzeigen</string>
+    <string name="text_charging_symbol_title">Akkuladesymbol neben der Prozentsatzanzeige</string>
+    <string name="text_charging_symbol_dialog">Zeigt ein Symbol neben der Prozentsatzanzeige außerhalb des Akkustandsymbols beim Laden an</string>
+    <string name="text_charging_symbol_default">Deaktiviert</string>
+    <string name="text_charging_symbol_flash">Blitz</string>
+    <string name="text_charging_symbol_tilde">Tilde</string>
+
+    <!-- Statusbar Clock -->
+    <string name="status_bar_clock_title">Uhrzeit- und Datumseinstellungen</string>
+    <string name="status_bar_clock_style_title">Anzeigestil der Uhrzeit</string>
+    <string name="status_bar_clock_style_right">Rechts</string>
+    <string name="status_bar_clock_style_left">Links</string>
+    <string name="status_bar_clock_style_center">Zentriert</string>
+    <string name="status_bar_clock_style_hidden">Ausgeblendet</string>
+    <string name="status_bar_am_pm_normal">Normal</string>
+    <string name="status_bar_am_pm_small">Klein</string>
+    <string name="status_bar_am_pm_hidden">Ausgeblendet (Standard)</string>
+
+    <string name="clock_date_display_summary">Benutzerdefiniertes Datum vor der Uhrzeit anzeigen</string>
+    <string name="clock_date_display_none">Ausgeblendet</string>
+    <string name="clock_date_display_small">Kleine Schriftgröße</string>
+    <string name="clock_date_display_normal">Normale Schriftgröße</string>
+
+    <!-- General strings -->
+    <string name="ok">OK</string>
+    <string name="default_string">Standard</string>
+
+    <!-- Misc strings -->
+    <string name="lockclock_title">cLock Widget</string>
+    <string name="lockclock_summary">Einstellungen für das \'cLock\' Widget anzeigen oder ändern</string>
+
+    <!-- Navbar -->
+    <string name="nav_bar_dynamic_title">Dynamische Navigationsleistenfarbe</string>
+    <string name="nav_bar_dynamic_summary">Gleicht die Hintergrundfarbe der Navigationsleiste an den primären Farbton der App an. Hinweis: die gewünschte App neustarten, um den Effekt zu sehen</string>
+
+    <!-- Lockscreen weather -->
+    <string name="display_category_weather_title">Sperrbildschirm Wetteranzeigeoptionen</string>
+    <string name="lock_screen_weather_settings_title">Wetter</string>
+    <string name="weather_cat_notifications_title">Benachrichtigungen</string>
+    <string name="weather_show_weather_title">Wetter anzeigen</string>
+    <string name="weather_show_weather_summary">Aktiviert die Anzeige der Wetterinformationen</string>
+    <string name="weather_show_location_title">Standort anzeigen</string>
+    <string name="weather_show_location_summary">Aktiviert die Anzeige der Standortinformationen</string>
+    <string name="weather_show_timestamp_title">Zeitstempel anzeigen</string>
+    <string name="weather_show_timestamp_summary">Aktiviert die Anzeige des Zeitstempels der letzten Aktualisierung</string>
+    <string name="weather_condition_icon_title">Zustandssymbol</string>
+    <string name="weather_condition_icon_dlg_title">Wähle ein Symbol für die Anzeige der Wetterlage</string>
+    <string name="weather_condition_icon_monochrome_title">Monochrom</string>
+    <string name="weather_condition_icon_colored_title">Gefärbt</string>
+    <string name="weather_condition_icon_vclouds_title">VClouds</string>
+    <string name="icons_title">Symbole</string>
+    <string name="position_right_title">Rechts</string>
+    <string name="position_centered_title">Zentriert</string>
+    <string name="hidden_title">Versteckt</string>
+    <string name="weather_hide_panel_title">Wetteranzeige verstecken</string>
+    <string name="weather_hide_panel_dlg_title">Auswählen, wann die Wetteranzeige versteckt werden sollte</string>
+    <string name="weather_hide_panel_auto_title">Automatisch</string>
+    <string name="weather_hide_panel_custom_title">Benutzerdefiniert</string>
+    <string name="weather_hide_panel_never_title">Niemals</string>
+    <string name="weather_hide_panel_auto_summary">Die Wetteranzeige wird versteckt, sobald die maximal erlaubte Anzahl an sichtbaren Benachrichtigungen auf dem Sperrbildschirm erreicht ist</string>
+    <string name="weather_hide_panel_custom_summary">Die Wetteranzeige wird versteckt, sobald die selbst ausgewählte Anzahl an sichtbaren Benachrichtigungen auf dem Sperrbildschirm erreicht ist</string>
+    <string name="weather_hide_panel_never_summary">Die Wetteranzeige wird nicht versteckt</string>
+    <string name="weather_number_of_notifications_title">Anzahl an Benachrichtigungen</string>
+
+    <!-- Power Menu -->
+    <string name="powermenu_reboot">Neustart</string>
+    <string name="powermenu_screenshot">Bildschirmfoto</string>
+    <string name="powermenu_screenrecord">Bildschirmaufzeichnung</string>
+    <string name="powermenu_torch">Taschenlampe</string>
+    <string name="powermenu_onthego_title">On-The-Go Modus</string>
+    <string name="powermenu_airplane">Flugmodus</string>
+    <string name="powermenu_soundpanel">Sound-Leiste</string>
+    <string name="powermenu_users">Benutzer wechseln</string>
+    <string name="powermenu_settings">Einstellungen</string>
+    <string name="powermenu_lockdown">Jetzt sperren</string>
+    <string name="powermenu_voiceassist">Sprachassistent</string>
+    <string name="powermenu_assist">Assistent</string>
+
+    <!-- Heads up -->
+    <string name="add_heads_up_package">App hinzufügen</string>
+    <string name="add_heads_up_whitelist_summary">Heads Up Benachrichtigungen für folgende Apps aktivieren</string>
+    <string name="heads_up_whitelist_title">Whitelist</string>
+    <string name="profile_choose_app">App wählen</string>
+    <string name="dialog_delete_title">Löschen</string>
+    <string name="dialog_delete_message">Auswahl?</string>
+
+    <!-- Tiles animation style & animation interpolator -->
+    <string name="quicksettings_tiles_category">Kachelanimationen konfigurieren</string>
+    <string name="qs_tile_animation_style_title">Stil der Kachelanimation</string>
+    <string name="qs_tile_animation_duration_title">Dauer der Kachelanimation</string>
+    <string name="qs_tile_animation_interpolator_title">Art der Kachelanimation</string>
+    <string name="qs_tile_animation_style_off">Keine Animation</string>
+    <string name="qs_tile_animation_style_flip">Drehen</string>
+    <string name="qs_tile_animation_style_rotate">Rotieren</string>
+    <string name="qs_tile_animation_duration_low">Langsam</string>
+    <string name="qs_tile_animation_duration_default">Standard</string>
+    <string name="qs_tile_animation_duration_fast">Schnell</string>
+    <string name="qs_tile_animation_duration_superfast">Superschnell</string>
+    <string name="qs_tile_animation_interpolator_linearInterpolator">Gleichmäßig</string>
+    <string name="qs_tile_animation_interpolator_accelerateInterpolator">Beschleunigen</string>
+    <string name="qs_tile_animation_interpolator_decelerateInterpolator">Verlangsamen</string>
+    <string name="qs_tile_animation_interpolator_accelerateDecelerateInterpolator">Beschleunigen &amp; Verlangsamen</string>
+    <string name="qs_tile_animation_interpolator_bounceInterpolator">Hüpfen</string>
+    <string name="qs_tile_animation_interpolator_overshootInterpolator">Überschwingen</string>
+    <string name="qs_tile_animation_interpolator_anticipateInterpolator">Schwung holen</string>
+<string name="qs_tile_animation_interpolator_anticipateOvershootInterpolator">Schwung holen &amp; Überschwingen</string>
+
+    <!-- Quicks settings all tile scroller -->
+    <string name="qqs_scroll_title">Mini-Kacheln blättern</string>
+    <string name="qqs_scroll_summary">Erlaubt das Blättern durch die Mini-Kacheln</string>
+
+    <!-- Toast Animation -->
+    <string name="toast_animation_title">Toast-Animation</string>
+    <string name="toast_none_animation">Keine</string>
+    <string name="toast_default_animation">Standard</string>
+    <string name="toast_fade_animation">Ausblenden</string>
+    <string name="toast_SlideRight_animation">Nach rechts schieben</string>
+    <string name="toast_SlideLeft_animation">Nach links schieben</string>
+    <string name="toast_Xylon_animation">Xylon</string>
+    <string name="toast_Toko_animation">Toko</string>
+    <string name="toast_Tn_animation">Tn</string>
+    <string name="toast_Honami_animation">Honami</string>
+    <string name="toast_FastFade_animation">Schnell ausblenden</string>
+    <string name="toast_GrowFade_animation">Ausblenden und vergrößern</string>
+    <string name="toast_GrowFadeCenter_animation">Zentriert ausblenden und vergrößern</string>
+    <string name="toast_GrowFadeBottom_animation">Nach unten ausblenden und vergrößern</string>
+    <string name="toast_Translucent_animation">Transparent</string>
+    <string name="toast_SlideLeftRight_animation">Von links nach rechts gleiten</string>
+    <string name="toast_SlideRightLeft_animation">Von rechts nach links gleiten</string>
+    <!-- Toast color options -->
+    <string name="toast_text_color">Toast Textfarbe</string>
+    <string name="toast_icon_color">Toast-Icon Farbe</string>
+
+    <!-- Network traffic -->
+    <string name="network_traffic_title">Netzwerkmonitor</string>
+    <string name="network_traffic_hidearrow_title">Pfeile ausblenden</string>
+
+    <!-- Wakelock blocker -->
+    <string name="wakelock_blocker_title">Wakelocks blockieren</string>
+    <string name="wakelock_blocker_summary">System-Wakelocks bei abgeschaltetem Bildschirm blockieren</string>
+    <string name="wakelock_blocker_save">Speichern</string>
+    <string name="wakelock_list_header">Vorhandene Wakelocks</string>
+    <string name="wakelock_blocker_reload">Neu Laden</string>
+    <string name="wakelock_blocker_warning_title">Mit großer Vorsicht verwenden</string>
+    <string name="wakelock_blocker_warning">Blockierte Wakelocks können Instabilität, Abstürze oder Datenverlust zur Folge haben</string>
+
+    <!-- Alarm blocker -->
+    <string name="alarm_blocker_title">Alarme blockieren</string>
+    <string name="alarm_blocker_summary">Alarme bei abgeschaltetem Bildschirm blockieren</string>
+    <string name="alarm_blocker_save">Speichern</string>
+    <string name="alarm_list_header">Vorhandene Alarme</string>
+    <string name="alarm_blocker_reload">Neu Laden</string>
+    <string name="alarm_blocker_warning_title">Mit großer Vorsicht verwenden</string>
+    <string name="alarm_blocker_warning">Blockierte Alarme können Instabilität, Abstürze oder Datenverlust zur Folge haben</string>
+
+    <!-- Lockscreen battery info indicator  -->
+    <string name="lockscreen_battery_info_title">Auflade-Infos auf dem Sperrbildschirm</string>
+    <string name="lockscreen_battery_info_summary">Zeigt auf dem Sperrbildschirm während des Aufladens den momentanen Ladestrom (in Volt) and die Akku-Temperatur an</string>
+
+    <!-- SlimRecents -->
+    <string name="slim_recents_title">Slim Appverlauf</string>
+    <string name="use_slim_recents_title">Als Appverlauf verwenden</string>
+    <string name="use_slim_recents_summary">Slim Appverlauf anstatt der Standardansicht für den Appverlauf benutzen</string>
+    <string name="slim_recents_settings_title">Slim Einstellungen</string>
+    <string name="slim_recents_settings_summary">Öffnet die Einstellungen des Slim Appverlaufs</string>
+    <string name="recent_panel_category">Slim Appverlauf</string>
+    <string name="show_running_tasks_title">Zeige nur laufende Apps</string>
+    <string name="recents_max_apps_title">max. zulässige App-Anzahl</string>
+    <string name="recent_panel_scale_title">Größe</string>
+    <string name="recent_panel_expanded_mode_title">Erweiterter Modus</string>
+    <string name="recent_panel_expanded_mode_summary">Erweiterter Vorschaumodus des Verlaufs</string>
+    <string name="recent_panel_expanded_mode_auto">Auto (Standard)</string>
+    <string name="recent_panel_expanded_mode_always">Immer</string>
+    <string name="recent_panel_expanded_mode_never">Niemals</string>
+    <string name="recent_panel_show_topmost_title">Zeige aktuelle App</string>
+    <string name="recent_panel_show_topmost_summary">Aktuelle App nicht von der Verlaufsanzeige ausschließen</string>
+    <string name="recent_panel_bg_color_title">Hintergrundfarbe des Panels</string>
+    <string name="recent_card_bg_color_title">Hintergrundfarbe der Karten</string>
+
+    <string name="recent_reset_title">Auf Standard Farben zurücksetzen</string>
+    <string name="recent_reset_confirm">Slim Appverlauf wirklich auf Standard Farbeinstellungen zurücksetzen?</string>
+    <string name="default_auto_string">Standard (App basiert)</string>
+    <string name="slim_icon_pack_title">Symbolepaket</string>
+    <string name="slim_icon_pack_summary">Ein benutzerdefiniertes Symbolepaket für Appverlauf-Seitenleiste verwenden</string>
+    <string name="no_iconpacks_summary">Kein Symbolepaket installiert</string>
+    <string name="dialog_pick_iconpack_title">Symbolepaket wählen</string>
+    <string name="default_iconpack_title">Standard Symbole</string>
+
+    <!-- ATTENTION: RTL languages need to replace left with right -->
+    <string name="recent_panel_lefty_mode_title">Anzeige auf der linken Seite</string>
+    <string name="recent_panel_lefty_mode_summary">Zeige das Panel des App-Verlaufs auf der linken Seite</string>
+
+    <!-- Slim Recent App Sidebar  -->
+    <string name="recent_app_sidebar_title">Appverlauf-Seitenleiste</string>
+    <string name="use_recent_app_sidebar_title">Appverlauf-Seitenleiste aktivieren</string>
+    <string name="use_recent_app_sidebar_summary">App-Verknüpfungen auf der anderen Seite anzeigen</string>
+    <string name="recent_app_sidebar_content_title">Inhalt der Appverlauf-Seitenleiste</string>
+    <string name="recent_app_sidebar_content_summary">Konfiguriert den Inhalt der Seitenleiste</string>
+    <string name="recent_app_sidebar_style_title">Stil der Seitenleiste</string>
+    <string name="recent_app_sidebar_style_summary">Stil der Appverlauf-Seitenleiste ändern</string>
+    <string name="recent_app_sidebar_hide_labels_title">Symbolbezeichnung verbergen</string>
+    <string name="recent_app_sidebar_label_color_title">Farbe der Bezeichnung</string>
+    <string name="recent_app_sidebar_bg_color_title">Hintergrundfarbe</string>
+    <string name="recent_app_sidebar_scale_title">Größe</string>
+    <string name="recent_app_sidebar_open_simultaneously_title">Zusammen mit dem Verlauf öffnen</string>
+<string name="recent_app_sidebar_open_simultaneously_summary">Reduziert bei Aktivierung die Verzögerung beim Öffnen</string>
+
+    <!-- Recents Membar -->
+    <string name="systemui_recents_mem_display_title">RAM-Anzeige</string>
+    <string name="systemui_recents_mem_display_summaryOn">Anzeige der Leiste aktiviert</string>
+<string name="systemui_recents_mem_display_summaryOff">Anzeige der Leiste deaktiviert</string>
+    <string name="slim_recents_mem_display_long_click_clear_title">RAM-Anzeige lange drücken</string>
+    <string name="slim_recents_mem_display_long_click_clear_summary">Verlauf leeren durch langes Drücken der RAM-Anzeige</string>
+    <string name="mem_bar_color">RAM-Anzeige Balkenfarbe</string>
+    <string name="mem_text_color">RAM-Anzeige Textfarbe</string>
+
+    <!-- Slim DSLV -->
+    <string name="shortcut_action_none">Kein</string>
+    <string name="shortcut_action_longpress">Langes drücken:</string>
+    <string name="shortcut_action_select_action_longpress">Aktion beim lange drücken wählen:</string>
+    <string name="shortcut_action_select_action">Aktion wählen:</string>
+    <string name="shortcut_action_select_action_newaction">Neue Aktion wählen:</string>
+    <string name="shortcut_action_reset">Wiederherstellen</string>
+    <string name="shortcut_action_add">Hinzufügen</string>
+    <string name="shortcut_action_reset_message">Zurücksetzen alle Einträge auf die Standardwerte?</string>
+    <string name="shortcut_action_max">Das Maximum an Einträgen wurde erreicht</string>
+    <string name="shortcut_action_warning">Warnung</string>
+    <string name="shortcut_action_warning_message">Der letzte Eintrag kann nicht gelöscht werden</string>
+    <string name="shortcut_action_disable_message">Deaktiviert\neinen Eintrag zum Aktivieren dieser Funktion hinzufügen</string>
+    <string name="shortcut_image_not_valid">Die gewählte App besitzt kein gültiges Symbol. Bitte wählen Sie eine andere App.</string>
+    <string name="shortcut_duplicate_entry">Die gewählte Aktion kann nicht zweimal hinzugefügt werden</string>
+    <string name="shortcut_action_help_shortcut">Verknüpfung</string>
+    <string name="shortcut_action_help_button">Taste</string>
+    <string name="shortcut_action_help_app">App</string>
+    <string name="shortcut_action_help_icon"> während bei Markieren des Symbols individuelle Anpassungsmöglichkeiten eröffnet werden</string>
+    <string name="shortcut_action_help_main">Um eine %1$s hinzuzufügen, auf das \"(+)\"-Symbol drücken. Wenn eine %1$s hinzugefügt wurde, kann diese durch nochmaliges Drücken auf den Eintrag geändert werden%2$s\n\nUm eine %1$s zu löschen, den Eintrag einfach nach links oder rechts aus dem Bildschirm schieben. Um die Position einer %1$s zu ändern, das Symbol auf der linken Seite lange drücken und den Eintrag auf die neue Position verschieben.\n\nZum Löschen auf das \"Zurücksetzen\"-Symbol drücken.</string>
+    <string name="shortcut_action_help_delete_last_entry">Wird jede %1$s in der Liste entfernt, wird das Feature vollständig deaktiviert.</string>
+    <string name="shortcut_action_help_pie_second_layer_delete_last_entry">Entfernen aller %1$s in der Liste wird den zweiten PIE Layer entfernen.</string>
+    <string name="shortcuts_applications">Applikationen</string>
+    <string name="shortcuts_select_custom_app_title">Benutzerdefinierte Anwendung auswählen</string>
+    <string name="shortcuts_icon_picker_type">Symbol auswählen:</string>
+    <string name="shortcuts_icon_default">Standard</string>
+    <string name="shortcuts_icon_presets">Systemsymbole</string>
+    <string name="shortcuts_icon_custom">Gallerie</string>
+    <string name="shortcuts_icon_picker_choose_icon_title">Symbol auswählen</string>
+
+    <string name="help">Hilfe</string>
+    <string name="reset_message">Alle Einträge auf Standard zurücksetzen?</string>
+
+    <string name="lockscreen_shortcuts_category">Verknüpfungen</string>
+    <string name="keyguard_torch_title">Lockscreen-Taschenlampe</string>
+    <string name="keyguard_torch_summary">Durch Gedrückthalten der Power-Taste wird die LED-Lampe ein- bzw. ausgeschaltet</string>
+    <!-- Lockscreen shortcuts -->
+    <string name="lockscreen_shortcuts_title">Obere Verknüpfungen</string>
+    <string name="lockscreen_shortcuts_summary">Ändern Sie die Verknüpfungen direkt unter der Uhr des Sperrbildschirms</string>
+    <string name="lockscreen_shorcuts_launch_type_title">Reaktionsmodus</string>
+    <string name="lockscreen_shortcuts_single_tap">Einfaches Antippen</string>
+    <string name="lockscreen_shortcuts_double_tap">Doppeltes Antippen</string>
+    <string name="lockscreen_shorcuts_longpress_title">Langes Drücken</string>
+    <string name="lockscreen_shorcuts_longpress_summary">Gedrückt halten zum Öffnen einer App-Verknüpfung</string>
+
+    <string name="shortcuts_icon_picker_alarm">Wecker</string>
+    <string name="shortcuts_icon_picker_andy">Andy</string>
+    <string name="shortcuts_icon_picker_battery">Akku</string>
+    <string name="shortcuts_icon_picker_browser">Browser</string>
+    <string name="shortcuts_icon_picker_calendar">Kalender</string>
+    <string name="shortcuts_icon_picker_camera">Kamera</string>
+    <string name="shortcuts_icon_picker_cloud">Cloud</string>
+    <string name="shortcuts_icon_picker_contact">Kontakt</string>
+    <string name="shortcuts_icon_picker_directdial">Direktwahl</string>
+    <string name="shortcuts_icon_picker_directmessage">Direktnachricht</string>
+    <string name="shortcuts_icon_picker_drive">Drive</string>
+    <string name="shortcuts_icon_picker_dropbox">Dropbox</string>
+    <string name="shortcuts_icon_picker_email">Email</string>
+    <string name="shortcuts_icon_picker_email2">E-Mail Alternative</string>
+    <string name="shortcuts_icon_picker_evernote">Evernote</string>
+    <string name="shortcuts_icon_picker_facebook">Facebook</string>
+    <string name="shortcuts_icon_picker_favorite">Favorit</string>
+    <string name="shortcuts_icon_picker_file_browser">Dateimanager</string>
+    <string name="shortcuts_icon_picker_file_browser2">Alternativer Dateimanager</string>
+    <string name="shortcuts_icon_picker_fitness">Fitness</string>
+    <string name="shortcuts_icon_picker_gallery">Gallerie</string>
+    <string name="shortcuts_icon_picker_gears">Gears</string>
+    <string name="shortcuts_icon_picker_google_small">Google</string>
+    <string name="shortcuts_icon_picker_gplus">Google Plus</string>
+    <string name="shortcuts_icon_picker_gtalk">Hangouts</string>
+    <string name="shortcuts_icon_picker_help">Hilfe</string>
+    <string name="shortcuts_icon_picker_joystick">Joystick</string>
+    <string name="shortcuts_icon_picker_key">Schlüssel/Konten</string>
+    <string name="shortcuts_icon_picker_laptop">Laptop</string>
+    <string name="shortcuts_icon_picker_notes">Notizen</string>
+    <string name="shortcuts_icon_picker_luggage">Travel</string>
+    <string name="shortcuts_icon_picker_maps">Maps</string>
+    <string name="shortcuts_icon_picker_market">Play Store</string>
+    <string name="shortcuts_icon_picker_movie">Filme</string>
+    <string name="shortcuts_icon_picker_music">Musik</string>
+    <string name="shortcuts_icon_picker_nav">Navigation</string>
+    <string name="shortcuts_icon_picker_phone">Telefon</string>
+    <string name="shortcuts_icon_picker_package">Package</string>
+    <string name="shortcuts_icon_picker_pinterest">Pinterest</string>
+    <string name="shortcuts_icon_picker_play">Play</string>
+    <string name="shortcuts_icon_picker_pocket">Tasche</string>
+    <string name="shortcuts_icon_picker_quicksettings">Schnelleinstellungen</string>
+    <string name="shortcuts_icon_picker_rss">RSS Feed</string>
+    <string name="shortcuts_icon_picker_sdcard">SD Karte</string>
+    <string name="shortcuts_icon_picker_search">Suche</string>
+    <string name="shortcuts_icon_picker_sms">Nachrichten</string>
+    <string name="shortcuts_icon_picker_tasks">Aufgaben</string>
+    <string name="shortcuts_icon_picker_terminal">Terminal</string>
+    <string name="shortcuts_icon_picker_transit">Übergang</string>
+    <string name="shortcuts_icon_picker_tv">Fernsehen</string>
+    <string name="shortcuts_icon_picker_twitter">Twitter</string>
+    <string name="shortcuts_icon_picker_unlock">Entsperren</string>
+
+    <string name="shortcut_action_none">keine</string>
+    <string name="shortcut_action_app">Benutzerdefinierte App</string>
+    <string name="shortcut_action_home">Startseite</string>
+    <string name="shortcut_action_back">Zurück</string>
+    <string name="shortcut_action_menu">Menü</string>
+    <string name="shortcut_action_ime">Eingabemethoden öffnen</string>
+    <string name="shortcut_action_power_menu">Powermenü</string>
+    <string name="shortcut_action_recent">Appverlauf</string>
+    <string name="shortcut_action_power">Bildschirm aus</string>
+    <string name="shortcut_action_search">In-App-Suche</string>
+    <string name="shortcut_action_ring_vib">Klingeln/Vibrieren</string>
+    <string name="shortcut_action_ring_silent">Klingeln/Stumm</string>
+    <string name="shortcut_action_ring_vib_silent">Klingeln/Vibrieren/Stumm</string>
+    <string name="shortcut_action_camera">Kamera</string>
+    <string name="shortcut_action_media_next">Musik - nächster Titel</string>
+    <string name="shortcut_action_media_play_pause">Musik - Play/Pause</string>
+    <string name="shortcut_action_media_previous">Musik - vorheriger Titel</string>
+    <string name="shortcut_action_wake_device">Gerät aufwecken</string>
+
+    <string name="shortcut_action_longpress">Lange drücken:</string>
+    <string name="shortcut_action_select_action_longpress">Aktion für langes Drücken wählen:</string>
+    <string name="shortcut_action_select_action">Aktion wählen:</string>
+    <string name="shortcut_action_select_action_newaction">Neue Aktion wählen:</string>
+    <string name="shortcut_action_reset">Wiederherstellen</string>
+    <string name="shortcut_action_add">Hinzufügen</string>
+    <string name="shortcut_action_reset_message">Alle Einträge auf die Standardwerte zurücksetzen?</string>
+    <string name="shortcut_action_max">Das Maximum an Einträgen wurde erreicht</string>
+    <string name="shortcut_action_warning">ACHTUNG</string>
+    <string name="shortcut_action_warning_message">Es ist nicht möglich den letzten Eintrag zu löschen</string>
+    <string name="shortcut_action_disable_message">Deaktiviert\nFügen sie einen Eintrag hinzu um dieses Feature zu aktivieren</string>
+    <string name="shortcut_image_not_valid">Die ausgewählte App hat kein gültiges Symbol zurückgeliefert oder unterstützt das Zuschneiden von Bildern nicht. Benutzen sie eine andere App.</string>
+    <string name="shortcut_duplicate_entry">Die Ausgewählte Aktion kann nicht zweimal hinzugefügt werden</string>
+    <string name="shortcut_action_help_shortcut">Verknüpfung</string>
+    <string name="shortcut_action_help_button">Button</string>
+    <string name="shortcut_action_help_app">Anwendung</string>
+    <string name="shortcut_action_help_icon">, während das auswählen des Symbols weitere Anpassungsmöglichkeiten anzeigen wird</string>
+    <string name="shortcut_action_help_main">Um eine %1$s hinzuzufügen, auf das \"(+)\"-Symbol drücken. Wenn eine %1$s hinzugefügt wurde, kann diese durch nochmaliges Drücken auf den Eintrag geändert werden%2$s\n\nUm eine %1$s zu löschen, den Eintrag einfach nach links oder rechts aus dem Bildschirm schieben. Um die Position einer %1$s zu ändern, das Symbol auf der linken Seite lange drücken und den Eintrag auf die neue Position verschieben.\n\nZum Löschen auf das \"Zurücksetzen\"-Symbol drücken.</string>
+    <string name="shortcut_action_help_delete_last_entry">Das Entfernen aller %1$s in der Liste deaktiviert das Feature vollständig.</string>
+    <string name="shortcut_action_help_pie_second_layer_delete_last_entry">Das Entfernen aller %1$s in der Liste deaktiviert das zweite Pie Layer vollständig.</string>
+    <string name="shortcut_picker_choose_longpress_action">Aktion beim lange drücken wählen:</string>
+    <string name="shortcut_picker_choose_new_action">Neue Aktion wählen:</string>
+    <string name="shortcut_picker_reassign_action">Aktion zuweisen:</string>
+    <string name="shortcut_picker_choose_action">Aktion wählen:</string>
+    <string name="shortcut_picker_applications_title">Applikationen</string>
+    <string name="shortcut_picker_activities_title">Aktivitäten</string>
+    <string name="shortcut_picker_select_app_title">Anwendung auswählen:</string>
+    <string name="shortcut_picker_select_activity_title">Aktivität wählen:</string>
+    <string name="shortcut_picker_choose_icon_type_title">Symboltyp auswählen:</string>
+    <string name="shortcut_picker_icon_type_default_title">Standard</string>
+    <string name="shortcut_picker_icon_type_system_title">Systemsymbole</string>
+    <string name="shortcut_picker_select_system_icon_title">Systemsymbol auswählen:</string>
+    <string name="shortcut_picker_icon_type_custom_title">Gallerie</string>
+    <string name="airplay">AirPlay</string>
+    <string name="android">Android</string>
+    <string name="badoo">Badoo</string>
+    <string name="battery">Akku</string>
+    <string name="bluetooth">Bluetooth</string>
+    <string name="bookmarks">Lesezeichen</string>
+    <string name="browser">Browser</string>
+    <string name="browser2">Browser2</string>
+    <string name="calculator">Taschenrechner</string>
+    <string name="calendar">Kalender</string>
+    <string name="calls">Anrufe</string>
+    <string name="camera">Kamera</string>
+    <string name="chrome">Chrome</string>
+    <string name="clock">Uhr</string>
+    <string name="cnn">CNN</string>
+    <string name="deezer2">Deezer2</string>
+    <string name="deezer">Deezer</string>
+    <string name="dolphin2">Dolphin</string>
+    <string name="downloads">Downloads</string>
+    <string name="dropbox">Dropbox</string>
+    <string name="ebay">Ebay</string>
+    <string name="email">Email</string>
+    <string name="evernote">Evernote</string>
+    <string name="explorer">Explorer</string>
+    <string name="falcon">Falcon</string>
+    <string name="fb">Facebook</string>
+    <string name="flipboard">Flipboard</string>
+    <string name="foursquare">Foursquare</string>
+    <string name="firefox">Firefox</string>
+    <string name="googlebuzz">Google Buzz</string>
+    <string name="googledocs">Google Docs</string>
+    <string name="googlewallet">Google Wallet</string>
+    <string name="line">Zeile</string>
+    <string name="mic">MIC</string>
+    <string name="newyorktimes">New-York Times</string>
+    <string name="rootexplorer">Root Explorer</string>
+    <string name="sim">SIM</string>
+    <string name="teamviewer">Teamviewer</string>
+    <string name="totalcommander">Total Commander</string>
+    <string name="weather">Wetter</string>
+    <string name="golocker">Gehen Sie locker</string>
+    <string name="googlecurrents">Google Currents</string>
+    <string name="googletalk">Google Talk</string>
+    <string name="gosms">Go SMS</string>
+    <string name="meebo">Meebo</string>
+    <string name="maps2">Maps2</string>
+    <string name="memorycleaner">Speicher-Reiniger</string>
+    <string name="navigation">Navigation</string>
+    <string name="pulse">Pulse</string>
+    <string name="shazam">Shazam</string>
+    <string name="swiftkey">Swiftkey</string>
+    <string name="tmobile">T-Mobile</string>
+    <string name="trash">Müll</string>
+    <string name="games">Spiele</string>
+    <string name="gmail">Gmail</string>
+    <string name="docs">Docs</string>
+    <string name="googledrive">Google Drive</string>
+    <string name="googleearth">Google Earth</string>
+    <string name="googlehangouts">Google Hangouts</string>
+    <string name="googlekeep">Google Notizen</string>
+    <string name="googleplay">Google Play</string>
+    <string name="googletranslate">Google Übersetzer</string>
+    <string name="google">Google</string>
+    <string name="googleplus">Google+</string>
+    <string name="imdb">iMDb</string>
+    <string name="instagram">Instagram</string>
+    <string name="lastfm">Lastfm</string>
+    <string name="maps">Maps</string>
+    <string name="messages">Messages</string>
+    <string name="music">Musik</string>
+    <string name="mxplayer">Mxplayer</string>
+    <string name="notepad">Direktnachricht</string>
+    <string name="opera">Opera</string>
+    <string name="paint">Paint</string>
+    <string name="paypal">Paypal</string>
+    <string name="phone">Telefon</string>
+    <string name="picasa">Picasa</string>
+    <string name="pictures2">Galerie2</string>
+    <string name="player_pro">Player pro</string>
+    <string name="playstation">PlayStation</string>
+    <string name="reddit">Reddit</string>
+    <string name="settings">Einstellungen</string>
+    <string name="skype">Skype</string>
+    <string name="soundscloud">Sound Cloud</string>
+    <string name="spotifiy">Spotifiy</string>
+    <string name="tapatalk">Tapatalk</string>
+    <string name="tunein">Tunein</string>
+    <string name="twitter">Twitter</string>
+    <string name="viber">Viber</string>
+    <string name="videocamera">Video-Kamera</string>
+    <string name="whatsapp">Whatsapp</string>
+    <string name="wifi">Wifi</string>
+    <string name="xda">XDA</string>
+    <string name="yahoo">Yahoo</string>
+    <string name="youtube">Youtube</string>
+    <string name="zedge">Zedge</string>
+
+    <!-- long press back to kill configurable timeout -->
+    <string name="kill_app_longpress_timeout_title">Dauer für Langes Drücken der Zurück-Taste</string>
+    <string name="timeout_2000">2 Sekunden</string>
+    <string name="timeout_1500">1,5 Sekunden</string>
+    <string name="timeout_1000">1 Sekunde (Standard)</string>
+    <string name="timeout_500">0,5 Sekunden</string>
+    <string name="timeout_350">0,35 Sekunden</string>
+
+    <!-- Hardware keys -->
+    <string name="hardware_keys_home_key_title">Home-Taste</string>
+    <string name="hardware_keys_menu_key_title">Menü-Taste</string>
+    <string name="hardware_keys_back_key_title">Zurück-Taste</string>
+    <string name="hardware_keys_short_press_title">Kurzes Drücken (Aktion)</string>
+    <string name="hardware_keys_long_press_title">Langes Drücken (Aktion)</string>
+    <string name="hardware_keys_double_tap_title">Doppeltes Tippen (Aktion)</string>
+    <string name="hardware_keys_action_nothing">Keine Aktion</string>
+    <string name="hardware_keys_action_menu">Öffnen/Schließen Menü</string>
+    <string name="hardware_keys_action_app_switch">Appverlauf Umschalter</string>
+    <string name="hardware_keys_action_search">Suchassistent</string>
+    <string name="hardware_keys_action_voice_search">Sprachsuche</string>
+    <string name="hardware_keys_action_in_app_search">In-App Suche</string>
+    <string name="hardware_keys_action_launch_camera">Kamera öffnen</string>
+    <string name="hardware_keys_action_sleep">Bildschirm ausschalten</string>
+    <string name="hardware_keys_action_last_app">Letzte Anwendung</string>
+    <string name="hardware_keys_action_split_screen">Geteilter Bildschirm</string>
+    <string name="hardware_keys_action_one_handed_mode_left">Einhand-Modus (linke Seite)</string>
+    <string name="hardware_keys_action_one_handed_mode_right">Einhand-Modus (rechte Seite)</string>
+
+    <!-- Fingerprint unlock keystore -->
+    <string name="fp_unlock_keystore_title">Mit Fingerabdruck entsperren</string>
+    <string name="fp_unlock_keystore_summary">Das Gerät nur mittels Fingerabdruck (ohne PIN/Passwort/Muster) nach dem Neustart entsperren\nHinweis: auf eigene Verantwortung!</string>
+</resources>
