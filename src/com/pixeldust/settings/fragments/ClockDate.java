@@ -83,7 +83,7 @@ public class ClockDate extends SettingsPreferenceFragment implements
         mClockDateStyle = (ListPreference) findPreference(STATUSBAR_CLOCK_DATE_STYLE);
 
         int clockStyle = Settings.System.getInt(resolver,
-                Settings.System.STATUSBAR_CLOCK_STYLE, 1);
+                Settings.System.STATUSBAR_CLOCK_STYLE, 0);
         mStatusBarClock.setValue(String.valueOf(clockStyle));
         mStatusBarClock.setSummary(mStatusBarClock.getEntry());
         mStatusBarClock.setOnPreferenceChangeListener(this);
@@ -147,7 +147,7 @@ public class ClockDate extends SettingsPreferenceFragment implements
             Settings.System.putInt(
                     resolver, Settings.System.STATUSBAR_CLOCK_STYLE, clockStyle);
             mStatusBarClock.setSummary(mStatusBarClock.getEntries()[index]);
-            if (clockStyle == 0) {
+            if (clockStyle == 3) { // 3 = clock hidden
                 mClockDateDisplay.setEnabled(false);
             } else {
                 mClockDateDisplay.setEnabled(true);
