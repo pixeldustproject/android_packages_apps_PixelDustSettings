@@ -26,7 +26,7 @@
          <com.pixeldust.settings.preferences.SystemSettingSwitchPreference
             android:key="powermenu_screenshot"
             android:title="@string/powermenu_screenshot"
-            android:defaultValue="true" />
+            android:defaultValue="false" />
 
          <com.pixeldust.settings.preferences.SystemSettingSwitchPreference
             android:key="powermenu_screenrecord"
