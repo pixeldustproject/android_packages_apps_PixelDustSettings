@@ -61,7 +61,7 @@
         <net.margaritov.preference.colorpicker.ColorPickerPreference
             android:key="recent_panel_bg_color"
             android:title="@string/recent_panel_bg_color_title"
-            defaultColor="#763367d6"
+            defaultColor="#00ffffff"
             alphaSlider="true" />
 
         <net.margaritov.preference.colorpicker.ColorPickerPreference

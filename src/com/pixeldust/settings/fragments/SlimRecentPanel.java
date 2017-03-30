@@ -174,9 +174,9 @@ public class SlimRecentPanel extends SettingsPreferenceFragment implements
     private void resetSettings() {
         Settings.System.putInt(getContext().getContentResolver(),
                 Settings.System.RECENT_PANEL_BG_COLOR,
-                0x763367d6);
+                0x00ffffff);
         mRecentPanelBgColor.setSummary(R.string.default_string);
-        mRecentPanelBgColor.setNewPreviewColor(0x763367d6);
+        mRecentPanelBgColor.setNewPreviewColor(0x00ffffff);
 
         Settings.System.putInt(getContext().getContentResolver(),
                 Settings.System.RECENT_CARD_BG_COLOR,
