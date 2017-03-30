@@ -26,7 +26,7 @@
                 android:entryValues="@array/show_network_traffic_frequency_values"
                 android:persistent="false" />
 
-        <com.pixeldust.settings.preferences.SystemSettingSwitchPreference
+        <SwitchPreference
                 android:key="network_traffic_hidearrow"
                 android:title="@string/network_traffic_hidearrow_title"
                 android:summary="@string/network_traffic_hidearrow_summary"
