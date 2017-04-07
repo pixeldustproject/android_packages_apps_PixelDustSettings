@@ -945,4 +945,7 @@
     <string name="notif_ticker_category">Notification ticker</string>
     <string name="ticker_title">Ticker</string>
     <string name="ticker_summary">Enable the old status bar notification ticker (Android 4.x). Do not use in conjunction with Heads Up.</string>
+    <string name="ticker_disabled">No ticker</string>
+    <string name="ticker_enabled">Notification ticker</string>
+    <string name="ticker_media_enabled">Notifications and music ticker</string>
 </resources>
