@@ -38,6 +38,13 @@
         android:summary="@string/heads_up_notifications_enabled_summary"
         android:defaultValue="true" />
 
+    <!-- Headset notification -->
+    <com.pixeldust.settings.preferences.SystemSettingSwitchPreference
+        android:key="headset_plugged_notification"
+        android:title="@string/headset_plugged_notification_title"
+        android:summary="@string/headset_plugged_notification_summary"
+        android:defaultValue="true" />
+
     <!-- Toast_animation -->
     <ListPreference
         android:key="toast_animation"
