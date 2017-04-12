@@ -17,39 +17,53 @@
 package com.pixeldust.settings.fragments;
 
 import android.content.ContentResolver;
+import android.content.Context;
+import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.content.pm.ResolveInfo;
+import android.content.res.Configuration;
+import android.database.Cursor;
+import android.net.Uri;
 import android.os.Bundle;
+import android.os.UserHandle;
+import android.provider.Settings;
+import android.support.v7.preference.PreferenceScreen;
 import android.support.v7.preference.ListPreference;
 import android.support.v14.preference.SwitchPreference;
 import android.support.v7.preference.Preference;
 import android.support.v7.preference.PreferenceCategory;
-import android.preference.PreferenceManager;
-import android.support.v7.preference.PreferenceScreen;
-import android.provider.Settings;
+import android.support.v7.preference.Preference.OnPreferenceChangeListener;
+import android.util.Log;
+import android.view.View;
+import android.widget.LinearLayout;
 
 import com.android.internal.logging.MetricsProto.MetricsEvent;
-
+import com.android.internal.util.pixeldust.ActionUtils;
 import com.android.settings.DevelopmentSettings;
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
+
 import com.pixeldust.settings.preferences.CustomSeekBarPreference;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
 
 public class LockScreenWeatherSettings extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener {
 
-    private static final String PREF_CONDITION_ICON =
-            "weather_condition_icon";
     private static final String PREF_HIDE_WEATHER =
             "weather_hide_panel";
     private static final String PREF_NUMBER_OF_NOTIFICATIONS =
             "weather_number_of_notifications";
-    private static final String KEY_LOCK_CLOCK = "lock_clock";
-    private static final String KEY_LOCK_CLOCK_PACKAGE_NAME = "com.cyanogenmod.lockclock";
 
-    private static final int MONOCHROME_ICON = 0;
+    private static final String CATEGORY_WEATHER = "weather_category";
+    private static final String WEATHER_SERVICE_PACKAGE = "org.omnirom.omnijaws";
+    private static final String CHRONUS_ICON_PACK_INTENT = "com.dvtonder.chronus.ICON_PACK";
 
-    private ListPreference mConditionIcon;
-    private ListPreference mHideWeather;
     private CustomSeekBarPreference mNumberOfNotifications;
+    private PreferenceCategory mWeatherCategory;
+    private ListPreference mHideWeather;
 
     private ContentResolver mResolver;
 
@@ -60,19 +74,7 @@ public class LockScreenWeatherSettings extends SettingsPreferenceFragment implem
         mResolver = getActivity().getContentResolver();
         PreferenceScreen prefs = getPreferenceScreen();
 
-        // mLockClock
-        if (!DevelopmentSettings.isPackageInstalled(getActivity(), KEY_LOCK_CLOCK_PACKAGE_NAME)) {
-            getPreferenceScreen().removePreference(findPreference(KEY_LOCK_CLOCK));
-        }
-
-        mConditionIcon =
-                (ListPreference) findPreference(PREF_CONDITION_ICON);
-        int conditionIcon = Settings.System.getInt(mResolver,
-               Settings.System.LOCK_SCREEN_WEATHER_CONDITION_ICON, MONOCHROME_ICON);
-        mConditionIcon.setValue(String.valueOf(conditionIcon));
-        mConditionIcon.setSummary(mConditionIcon.getEntry());
-        mConditionIcon.setOnPreferenceChangeListener(this);
-
+        //OmniJaws
         mHideWeather =
                 (ListPreference) findPreference(PREF_HIDE_WEATHER);
         int hideWeather = Settings.System.getInt(mResolver,
@@ -88,6 +90,11 @@ public class LockScreenWeatherSettings extends SettingsPreferenceFragment implem
         mNumberOfNotifications.setOnPreferenceChangeListener(this);
 
         updatePreference();
+
+        mWeatherCategory = (PreferenceCategory) prefs.findPreference(CATEGORY_WEATHER);
+        if (mWeatherCategory != null && !isOmniJawsServiceInstalled()) {
+            prefs.removePreference(mWeatherCategory);
+        }
     }
 
     @Override
@@ -117,15 +124,7 @@ public class LockScreenWeatherSettings extends SettingsPreferenceFragment implem
     }
 
     public boolean onPreferenceChange(Preference preference, Object newValue) {
-        boolean value;
-        if (preference == mConditionIcon) {
-            int intValue = Integer.valueOf((String) newValue);
-            int index = mConditionIcon.findIndexOfValue((String) newValue);
-            Settings.System.putInt(mResolver,
-                    Settings.System.LOCK_SCREEN_WEATHER_CONDITION_ICON, intValue);
-            mConditionIcon.setSummary(mConditionIcon.getEntries()[index]);
-            return true;
-        } else if (preference == mHideWeather) {
+        if (preference == mHideWeather) {
             int intValue = Integer.valueOf((String) newValue);
             int index = mHideWeather.findIndexOfValue((String) newValue);
             Settings.System.putInt(mResolver,
@@ -140,5 +139,9 @@ public class LockScreenWeatherSettings extends SettingsPreferenceFragment implem
             return true;
         }
         return false;
+    }
+
+    private boolean isOmniJawsServiceInstalled() {
+         return ActionUtils.isAvailableApp(WEATHER_SERVICE_PACKAGE, getActivity());
     }
 }

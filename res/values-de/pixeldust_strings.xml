@@ -529,6 +529,8 @@
     <!-- OmniJaws -->
     <string name="weather_title">Wetter</string>
     <string name="weather_config_title">Wetterkachel-Einstellungen</string>
+    <string name="lockscreen_weather_title">Sperrbildschirm-Wetteranzeige</string>
+    <string name="lockscreen_weather_config_title">Sperrbildschirm-Wetteranzeige konfigurieren</string>
 
     <!-- StatusBar weather settings -->
     <string name="statusbar_weather_category">Wetter in Statusleiste und Schnelleinstellungen</string>
