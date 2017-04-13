@@ -76,7 +76,6 @@ public class QuickSettings extends SettingsPreferenceFragment implements
     private static final String PREF_TILE_ANIM_STYLE = "qs_tile_animation_style";
     private static final String PREF_TILE_ANIM_DURATION = "qs_tile_animation_duration";
     private static final String PREF_TILE_ANIM_INTERPOLATOR = "qs_tile_animation_interpolator";
-    private static final String PREF_COLUMNS = "qs_layout_columns";
     private static final String DAYLIGHT_HEADER_PACK = "daylight_header_pack";
     private static final String DEFAULT_HEADER_PACKAGE = "com.android.systemui";
     private static final String CUSTOM_HEADER_IMAGE_SHADOW = "status_bar_custom_header_shadow";
@@ -94,7 +93,6 @@ public class QuickSettings extends SettingsPreferenceFragment implements
     private ListPreference mDaylightHeaderPack;
     private CustomSeekBarPreference mHeaderShadow;
     private ListPreference mHeaderProvider;
-    private CustomSeekBarPreference mQsColumns;
     private String mDaylightHeaderProvider;
     private PreferenceScreen mHeaderBrowse;
     private SecureSettingSwitchPreference mQsLock;
@@ -141,12 +139,6 @@ public class QuickSettings extends SettingsPreferenceFragment implements
         mTileAnimationInterpolator.setValue(String.valueOf(tileAnimationInterpolator));
         updateTileAnimationInterpolatorSummary(tileAnimationInterpolator);
         mTileAnimationInterpolator.setOnPreferenceChangeListener(this);
-
-        mQsColumns = (CustomSeekBarPreference) findPreference(PREF_COLUMNS);
-        int columnsQs = Settings.System.getInt(resolver,
-                Settings.System.QS_LAYOUT_COLUMNS, 3);
-        mQsColumns.setValue(columnsQs / 1);
-        mQsColumns.setOnPreferenceChangeListener(this);
 
         String settingHeaderPackage = Settings.System.getString(resolver,
                 Settings.System.STATUS_BAR_DAYLIGHT_HEADER_PACK);
@@ -226,10 +218,6 @@ public class QuickSettings extends SettingsPreferenceFragment implements
             Settings.System.putIntForUser(getContentResolver(), Settings.System.ANIM_TILE_INTERPOLATOR,
                     tileAnimationInterpolator, UserHandle.USER_CURRENT);
             updateTileAnimationInterpolatorSummary(tileAnimationInterpolator);
-            return true;
-        } else if (preference == mQsColumns) {
-            int qsColumns = (Integer) newValue;
-            Settings.System.putInt(resolver, Settings.System.QS_LAYOUT_COLUMNS, qsColumns * 1);
             return true;
         } else if (preference == mDaylightHeaderPack) {
             String value = (String) newValue;

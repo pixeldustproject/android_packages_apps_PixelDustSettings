@@ -73,14 +73,6 @@
             android:summary="@string/qs_tile_title_visibility_summary"
             android:defaultValue="true"/>
 
-        <com.pixeldust.settings.preferences.CustomSeekBarPreference
-            android:key="qs_layout_columns"
-            android:title="@string/qs_columns_title"
-            settings:max="9"
-            settings:min="1"
-            settings:units=""
-            android:persistent="false" />
-
         <com.pixeldust.settings.preferences.SystemSettingSwitchPreference
             android:key="qs_quickbar_scroll_enabled"
             android:title="@string/qqs_scroll_title"

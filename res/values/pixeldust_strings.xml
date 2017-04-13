@@ -322,8 +322,6 @@
     <string name="qs_set_animation_style">%1$s</string>
     <string name="qs_set_animation_duration">%1$s</string>
     <string name="qs_set_animation_interpolator">%1$s</string>
-    <!-- Quicks settings columns -->
-    <string name="qs_columns_title">Number of tiles in column</string>
     <!-- Quicks settings titles -->
     <string name="qs_tile_title_visibility_title">Quick settings titles</string>
     <string name="qs_tile_title_visibility_summary">Enable titles on quick settings</string>
