@@ -41,6 +41,10 @@
     <string name="arrow_down">↓</string>
     <string name="color_default">Default</string>
 
+    <!-- Wake when connected/disconnected -->
+    <string name="wake_when_plugged_or_unplugged_title">Wake on plug</string>
+    <string name="wake_when_plugged_or_unplugged_summary">Turn on screen when connecting or disconnecting charger</string>
+
     <!-- Notification/Battery lights -->
     <string name="led_category">Led controls</string>
     <string name="edit_light_settings">Edit light settings</string>
