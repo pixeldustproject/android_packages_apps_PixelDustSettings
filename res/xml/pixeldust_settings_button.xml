@@ -18,11 +18,22 @@
 	android:title="@string/button_title"
         xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
-    <ListPreference
-        android:key="screenrecord_chord_type"
-        android:title="@string/screen_record_chord_title"
-        android:entries="@array/screen_record_chord_entries"
-        android:entryValues="@array/screen_record_chord_values" />
+    <PreferenceCategory
+        android:key="volume keys"
+        android:title="@string/vol_keys_cat" >
+
+        <com.pixeldust.settings.preferences.SystemSettingSwitchPreference
+            android:key="swap_volume_buttons"
+            android:title="@string/swap_volume_buttons_title"
+            android:summary="@string/swap_volume_buttons_summary"
+            android:defaultValue="false"/>
+
+        <ListPreference
+            android:key="screenrecord_chord_type"
+            android:title="@string/screen_record_chord_title"
+            android:entries="@array/screen_record_chord_entries"
+            android:entryValues="@array/screen_record_chord_values" />
+    </PreferenceCategory>
 
     <PreferenceCategory
         android:key="home_key"

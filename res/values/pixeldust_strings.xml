@@ -848,4 +848,10 @@
     <!-- Headset notification -->
     <string name="headset_plugged_notification_title">Headset notification</string>
     <string name="headset_plugged_notification_summary">Show notification when connecting wired headsets</string>
+
+    <!-- Volume keys category -->
+    <string name="vol_keys_cat">Volume keys</string>
+    <!-- Volume key orientation swap -->
+    <string name="swap_volume_buttons_title">Volume button swap</string>
+    <string name="swap_volume_buttons_summary">Adjust volume buttons action based on current orientation</string>
 </resources>
