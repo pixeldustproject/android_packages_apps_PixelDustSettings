@@ -65,6 +65,9 @@
     <string name="nav_bar_dynamic_title">Dynamische Navigationsleistenfarbe</string>
     <string name="nav_bar_dynamic_summary">Gleicht die Hintergrundfarbe der Navigationsleiste an den primären Farbton der App an. Hinweis: die gewünschte App neustarten, um den Effekt zu sehen</string>
 
+    <!-- Volume keys category -->
+    <string name="vol_keys_cat">Lautstärketasten</string>
+
     <!-- Lockscreen weather -->
     <string name="display_category_weather_title">Sperrbildschirm Wetteranzeigeoptionen</string>
     <string name="lock_screen_weather_settings_title">Wetter</string>
