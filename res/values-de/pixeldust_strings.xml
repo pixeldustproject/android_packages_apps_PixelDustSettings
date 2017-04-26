@@ -550,4 +550,8 @@
     <string name="status_bar_temperature_show_scale_hide_image">Temperatur mit Einheit</string>
     <string name="status_bar_temperature_hide_scale_hide_image">Temperatur ohne Einheit</string>
 <string name="status_bar_show_image">Bild</string>
+
+    <!-- Headset notification -->
+    <string name="headset_plugged_notification_title">Kopfhörer Benachrichtigung</string>
+    <string name="headset_plugged_notification_summary">Benachrichtigung anzeigen sobald Kopfhörer verbunden sind</string>
 </resources>
