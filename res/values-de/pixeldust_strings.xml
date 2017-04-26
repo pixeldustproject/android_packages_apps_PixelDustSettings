@@ -554,4 +554,8 @@
     <!-- Headset notification -->
     <string name="headset_plugged_notification_title">Kopfhörer Benachrichtigung</string>
     <string name="headset_plugged_notification_summary">Benachrichtigung anzeigen sobald Kopfhörer verbunden sind</string>
+
+    <!-- Auto brightness icon -->
+    <string name="brightness_icon_title">Auto-Helligkeitssymbol</string>
+    <string name="brightness_icon_summary">Zeigt vor dem Helligkeitsregler ein Symbol zum Aktivieren der Auto-Helligkeitseinstellung an</string>
 </resources>
