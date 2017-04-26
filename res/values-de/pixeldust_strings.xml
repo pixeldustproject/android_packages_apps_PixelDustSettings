@@ -120,6 +120,10 @@
     <string name="dialog_delete_title">Löschen</string>
     <string name="dialog_delete_message">Auswahl?</string>
 
+    <!-- Global heads-up toggle -->
+    <string name="heads_up_notifications_enabled_title">Erlaube Heads Up Benachrichtigungen (Global)</string>
+    <string name="heads_up_notifications_enabled_summary">Heads Up für alle Benachrichtigungen global ein- oder ausschalten</string>
+
     <!-- Tiles animation style & animation interpolator -->
     <string name="quicksettings_tiles_category">Kachelanimationen konfigurieren</string>
     <string name="qs_tile_animation_style_title">Stil der Kachelanimation</string>

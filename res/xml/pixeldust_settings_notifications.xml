@@ -31,13 +31,6 @@
         android:title="@string/heads_up_notifications"
         android:fragment="com.pixeldust.settings.fragments.HeadsUpSettings" />
 
-    <!-- Global heads-up toggle -->
-    <com.pixeldust.settings.preferences.SystemSettingSwitchPreference
-        android:key="heads_up_notifications_user_enabled"
-        android:title="@string/heads_up_notifications_enabled_title"
-        android:summary="@string/heads_up_notifications_enabled_summary"
-        android:defaultValue="true" />
-
     <!-- Headset notification -->
     <com.pixeldust.settings.preferences.SystemSettingSwitchPreference
         android:key="headset_plugged_notification"
