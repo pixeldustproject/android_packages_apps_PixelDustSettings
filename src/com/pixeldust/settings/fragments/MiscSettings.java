@@ -16,16 +16,17 @@ import android.os.UserHandle;
 import android.provider.Settings;
 import android.support.v7.preference.ListPreference;
 import android.support.v7.preference.Preference;
+import android.support.v7.preference.PreferenceCategory;
 import android.support.v7.preference.PreferenceScreen;
 import android.support.v7.preference.Preference.OnPreferenceChangeListener;
 
+import com.android.internal.util.pixeldust.ActionUtils;
 import com.android.settings.DevelopmentSettings;
 import com.android.settings.R;
+import com.android.settings.SettingsPreferenceFragment;
 
 import java.util.Arrays;
 import java.util.HashSet;
-
-import com.android.settings.SettingsPreferenceFragment;
 
 public class MiscSettings extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener {
@@ -38,17 +39,24 @@ public class MiscSettings extends SettingsPreferenceFragment implements
     private static final String SCROLLINGCACHE_DEFAULT = "1";
 
     private ListPreference mScrollingCachePref;
+    private PreferenceCategory mMiscCategory;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         addPreferencesFromResource(R.xml.pixeldust_settings_misc);
+        PreferenceScreen prefs = getPreferenceScreen();
 
         mScrollingCachePref = (ListPreference) findPreference(SCROLLINGCACHE_PREF);
         mScrollingCachePref.setValue(SystemProperties.get(SCROLLINGCACHE_PERSIST_PROP,
                 SystemProperties.get(SCROLLINGCACHE_PERSIST_PROP, SCROLLINGCACHE_DEFAULT)));
         mScrollingCachePref.setOnPreferenceChangeListener(this);
+
+        mMiscCategory = (PreferenceCategory) prefs.findPreference(KEY_LOCK_CLOCK);
+        if (mMiscCategory != null && !isLockclockInstalled()) {
+            prefs.removePreference(mMiscCategory);
+        }
     }
 
     @Override
@@ -66,4 +74,9 @@ public class MiscSettings extends SettingsPreferenceFragment implements
     protected int getMetricsCategory() {
         return MetricsEvent.PIXELDUST;
     }
+
+    private boolean isLockclockInstalled() {
+         return ActionUtils.isAvailableApp(KEY_LOCK_CLOCK_PACKAGE_NAME, getActivity());
+    }
+
 }
