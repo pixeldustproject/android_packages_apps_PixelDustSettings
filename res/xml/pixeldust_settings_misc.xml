@@ -30,6 +30,27 @@
                 android:targetClass="com.cyanogenmod.lockclock.preference.Preferences" />
         </PreferenceScreen>
 
+        <PreferenceCategory
+            android:key="incall_vib_options"
+            android:title="@string/incall_vibration_category" >
+
+            <com.pixeldust.settings.preferences.SystemSettingSwitchPreference
+                android:key="vibrate_on_connect"
+                android:title="@string/incall_vibrate_connect_title"
+                android:defaultValue="false" />
+
+            <com.pixeldust.settings.preferences.SystemSettingSwitchPreference
+                android:key="vibrate_on_callwaiting"
+                android:title="@string/incall_vibrate_call_wait_title"
+                android:defaultValue="false" />
+
+            <com.pixeldust.settings.preferences.SystemSettingSwitchPreference
+                android:key="vibrate_on_disconnect"
+                android:title="@string/incall_vibrate_disconnect_title"
+                android:defaultValue="false" />
+
+        </PreferenceCategory>
+
         <ListPreference
              android:key="pref_scrollingcache"
              android:dialogTitle="@string/pref_scrollingcache_title"
