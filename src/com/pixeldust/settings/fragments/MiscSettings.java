@@ -34,7 +34,7 @@ public class MiscSettings extends SettingsPreferenceFragment implements
 
     private static final String INCALL_VIB_OPTIONS = "incall_vib_options";
 
-    private static final String KEY_LOCK_CLOCK = "lock_clock";
+    private static final String KEY_LOCK_CLOCK = "cat_lock_clock";
     private static final String KEY_LOCK_CLOCK_PACKAGE_NAME = "com.cyanogenmod.lockclock";
 
     private static final String SCROLLINGCACHE_PREF = "pref_scrollingcache";
@@ -42,7 +42,6 @@ public class MiscSettings extends SettingsPreferenceFragment implements
     private static final String SCROLLINGCACHE_DEFAULT = "1";
 
     private ListPreference mScrollingCachePref;
-    private PreferenceCategory mMiscCategory;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -61,7 +60,7 @@ public class MiscSettings extends SettingsPreferenceFragment implements
                 SystemProperties.get(SCROLLINGCACHE_PERSIST_PROP, SCROLLINGCACHE_DEFAULT)));
         mScrollingCachePref.setOnPreferenceChangeListener(this);
 
-        mMiscCategory = (PreferenceCategory) prefs.findPreference(KEY_LOCK_CLOCK);
+        PreferenceCategory mMiscCategory = (PreferenceCategory) findPreference(KEY_LOCK_CLOCK);
         if (mMiscCategory != null && !isLockclockInstalled()) {
             prefs.removePreference(mMiscCategory);
         }

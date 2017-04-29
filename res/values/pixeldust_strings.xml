@@ -147,7 +147,8 @@
     <string name="default_string">Default</string>
 
     <!-- Misc strings -->
-    <string name="lockclock_title">Clock widget</string>
+    <string name="lockclock_cat_title">Weather widget configuration</string>
+    <string name="lockclock_title">cLock widget</string>
     <string name="lockclock_summary">View or change how the \'cLock\' widget will display</string>
 
     <!-- Language options - Volume rocker cursor control -->

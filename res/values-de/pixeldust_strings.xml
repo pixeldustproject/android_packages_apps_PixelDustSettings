@@ -58,6 +58,7 @@
     <string name="default_string">Standard</string>
 
     <!-- Misc strings -->
+    <string name="lockclock_cat_title">cLock-Widget konfigurieren</string>
     <string name="lockclock_title">cLock Widget</string>
     <string name="lockclock_summary">Einstellungen für das \'cLock\' Widget anzeigen oder ändern</string>
 
