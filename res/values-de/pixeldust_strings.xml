@@ -198,10 +198,26 @@
     <string name="lockscreen_battery_info_title">Auflade-Infos auf dem Sperrbildschirm</string>
     <string name="lockscreen_battery_info_summary">Zeigt auf dem Sperrbildschirm während des Aufladens den momentanen Ladestrom (in Volt) and die Akku-Temperatur an</string>
 
+    <!-- AOSP recents -->
+    <string name="recents_use_aosp_title">Standard Appverlauf (AOSP)</string>
+    <string name="recents_use_aosp_summary">Standard Appverlauf verwenden</string>
+    <string name="aosp_recents_title">AOSP Appverlauf</string>
+    <string name="aosp_recents_settings_title">AOSP Einstellungen</string>
+    <string name="aosp_recents_settings_summary">Öffnet die Einstellungen des AOSP Appverlauf</string>
+
+    <!-- OmniSwitch recents -->
+    <string name="omniswitch_recents_title">OmniSwitch Appverlauf</string>
+    <string name="recents_use_omniswitch_title">OmniSwitch verwenden</string>
+    <string name="recents_use_omniswitch_summary">OmniSwitch anstatt der Standardansicht für den Appverlauf benutzen</string>
+    <string name="omniswitch_start_settings_title">OmniSwitch Einstellungen</string>
+    <string name="omniswitch_start_settings_summary">Öffnet die Einstellungen von OmniSwitch</string>
+    <string name="omniswitch_first_time_title">Warnung</string>
+    <string name="omniswitch_first_time_message">Falls OmniSwitch als Appverlauf verwendet werden soll, bitte sicherstellen, dass OmniSwitch aktiviert ist.</string>
+
     <!-- SlimRecents -->
     <string name="slim_recents_title">Slim Appverlauf</string>
-    <string name="use_slim_recents_title">Als Appverlauf verwenden</string>
-    <string name="use_slim_recents_summary">Slim Appverlauf anstatt der Standardansicht für den Appverlauf benutzen</string>
+    <string name="recents_use_slim_title">Slim Appverlauf verwenden</string>
+    <string name="recents_use_slim_summary">Slim Appverlauf anstatt der Standardansicht für den Appverlauf benutzen</string>
     <string name="slim_recents_settings_title">Slim Einstellungen</string>
     <string name="slim_recents_settings_summary">Öffnet die Einstellungen des Slim Appverlaufs</string>
     <string name="recent_panel_category">Slim Appverlauf</string>

@@ -461,6 +461,12 @@
     <string name="lockscreen_battery_info_title">Lock screen charging info</string>
     <string name="lockscreen_battery_info_summary">Display additional charging info on lockscreen while charging</string>
 
+    <!-- AOSP recents -->
+    <string name="recents_use_aosp_title">Use default recents (AOSP)</string>
+    <string name="recents_use_aosp_summary">Use default recents view</string>
+    <string name="aosp_recents_title">AOSP recents</string>
+    <string name="aosp_recents_settings_title">AOSP recents settings</string>
+    <string name="aosp_recents_settings_summary">View the settings for AOSP recents</string>
     <!-- Recent clear all button and location -->
     <string name="show_clear_all_recents_button_title">Clear all FAB</string>
     <string name="show_clear_all_recents_button_summary_on">Show clear all FAB</string>
@@ -472,6 +478,7 @@
     <string name="recents_clear_all_location_bottom_right">Bottom right</string>
     <string name="recents_clear_all_location_bottom_left">Bottom left</string>
     <string name="recents_clear_all_location_bottom_center">Bottom center</string>
+
     <!-- Immersive recents -->
     <string name="immersive_recents_title">Immersive recents</string>
     <string name="immersive_recents_default">Default</string>
@@ -479,10 +486,19 @@
     <string name="immersive_recents_statusbar">Status bar only</string>
     <string name="immersive_recents_navbar">Navigation bar only</string>
 
-    <!-- Slim Recent panel -->
+    <!-- OmniSwitch recents -->
+    <string name="omniswitch_recents_title">OmniSwitch recents</string>
+    <string name="recents_use_omniswitch_title">Use OmniSwitch</string>
+    <string name="recents_use_omniswitch_summary">Use OmniSwitch instead of the default recents view</string>
+    <string name="omniswitch_start_settings_title">OmniSwitch settings</string>
+    <string name="omniswitch_start_settings_summary">View the settings for OmniSwitch</string>
+    <string name="omniswitch_first_time_title">Warning</string>
+    <string name="omniswitch_first_time_message">If using OmniSwitch as recents alternative, make sure you have OmniSwitch enabled</string>
+
+    <!-- Slim recents -->
     <string name="slim_recents_title">Slim recents</string>
-    <string name="use_slim_recents_title">Use for a recents alterative</string>
-    <string name="use_slim_recents_summary">Use slim recents instead of the default recents view</string>
+    <string name="recents_use_slim_title">Use slim recents</string>
+    <string name="recents_use_slim_summary">Use slim recents instead of the default recents view</string>
     <string name="slim_recents_settings_title">Slim recents settings</string>
     <string name="slim_recents_settings_summary">View the settings for slim recents</string>
     <string name="recent_panel_category">Slim recent apps panel</string>
@@ -511,7 +527,7 @@
     <string name="recent_panel_lefty_mode_title">Show on the left edge</string>
     <string name="recent_panel_lefty_mode_summary">Show recent apps panel on the left edge</string>
 
-    <!-- Slim Recent App Sidebar  -->
+    <!-- Slim Recents App Sidebar  -->
     <string name="recent_app_sidebar_title">Recents app sidebar</string>
     <string name="use_recent_app_sidebar_title">Enable app sidebar</string>
     <string name="use_recent_app_sidebar_summary">Show app shortcuts on the other edge</string>

@@ -16,66 +16,152 @@
 
 package com.pixeldust.settings.fragments;
 
+import android.app.AlertDialog;
 import android.content.ContentResolver;
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.provider.Settings;
+import android.provider.Settings.SettingNotFoundException;
 import android.support.v7.preference.ListPreference;
+import android.support.v14.preference.SwitchPreference;
 import android.support.v7.preference.Preference;
 import android.support.v7.preference.Preference.OnPreferenceChangeListener;
+import android.support.v7.preference.PreferenceCategory;
 import android.support.v7.preference.PreferenceScreen;
 
 import com.android.internal.logging.MetricsProto.MetricsEvent;
-
+import com.android.internal.util.pixeldust.ActionUtils;
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
+
+import com.pixeldust.settings.preferences.SystemSettingSwitchPreference;
 
 public class RecentsSettings extends SettingsPreferenceFragment
         implements OnPreferenceChangeListener {
 
-    private static final String RECENTS_CLEAR_ALL_LOCATION = "recents_clear_all_location";
-    private static final String IMMERSIVE_RECENTS = "immersive_recents";
+    private static final String RECENTS_USE_SLIM = "recents_use_slim";
+    private static final String RECENTS_USE_AOSP = "recents_use_aosp";
+    private static final String RECENTS_USE_OMNISWITCH = "recents_use_omniswitch";
+    private static final String OMNISWITCH_START_SETTINGS = "omniswitch_start_settings";
+    public static final String OMNISWITCH_PACKAGE_NAME = "org.omnirom.omniswitch";
+    public static Intent INTENT_OMNISWITCH_SETTINGS = new Intent(Intent.ACTION_MAIN).setClassName(OMNISWITCH_PACKAGE_NAME,
+                                OMNISWITCH_PACKAGE_NAME + ".SettingsActivity");
+    private static final String SLIM_RECENTS_SETTINGS = "slim_recent_panel";
+    private static final String CATEGORY_AOSP_RECENTS = "aosp_recents";
+    private static final String CATEGORY_OMNI_RECENTS = "omni_recents";
+    private static final String CATEGORY_SLIM_RECENTS = "slim_recents";
 
-    private ListPreference mRecentsClearAllLocation;
-    private ListPreference mImmersiveRecents;
+    private Preference mOmniSwitchSettings;
+    private Preference mSlimRecentsSettings;
+    private PreferenceCategory mOmniRecents;
+    private PreferenceCategory mAOSPRecents;
+    private PreferenceCategory mSlimRecents;
+    private SwitchPreference mUseAOSPRecents;
+    private SwitchPreference mRecentsUseSlim;
+    private SwitchPreference mRecentsUseOmniSwitch;
+
+    private boolean mOmniSwitchInitCalled;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         addPreferencesFromResource(R.xml.pixeldust_settings_recents);
         ContentResolver resolver = getActivity().getContentResolver();
-        PreferenceScreen prefScreen = getPreferenceScreen();
+        PreferenceScreen prefSet = getPreferenceScreen();
 
-        mRecentsClearAllLocation = (ListPreference) findPreference(RECENTS_CLEAR_ALL_LOCATION);
-        int location = Settings.System.getInt(resolver,
-                Settings.System.RECENTS_CLEAR_ALL_LOCATION, 3);
-        mRecentsClearAllLocation.setValue(String.valueOf(location));
-        mRecentsClearAllLocation.setSummary(mRecentsClearAllLocation.getEntry());
-        mRecentsClearAllLocation.setOnPreferenceChangeListener(this);
+        mAOSPRecents = (PreferenceCategory) findPreference(CATEGORY_AOSP_RECENTS);
+        mOmniRecents = (PreferenceCategory) findPreference(CATEGORY_OMNI_RECENTS);
+        mSlimRecents = (PreferenceCategory) findPreference(CATEGORY_SLIM_RECENTS);
 
-        mImmersiveRecents = (ListPreference) findPreference(IMMERSIVE_RECENTS);
-        mImmersiveRecents.setValue(String.valueOf(Settings.System.getInt(
-                resolver, Settings.System.IMMERSIVE_RECENTS, 0)));
-        mImmersiveRecents.setSummary(mImmersiveRecents.getEntry());
-        mImmersiveRecents.setOnPreferenceChangeListener(this);
+        mRecentsUseOmniSwitch = (SwitchPreference) prefSet.findPreference(RECENTS_USE_OMNISWITCH);
+        try {
+            mRecentsUseOmniSwitch.setChecked(Settings.System.getInt(resolver,
+                    Settings.System.RECENTS_USE_OMNISWITCH) == 1);
+            mOmniSwitchInitCalled = true;
+        } catch(SettingNotFoundException e){
+            // if the settings value is unset
+        }
+        mRecentsUseOmniSwitch.setOnPreferenceChangeListener(this);
+
+        mOmniSwitchSettings = (Preference) prefSet.findPreference(OMNISWITCH_START_SETTINGS);
+
+        mOmniSwitchSettings.setEnabled(mRecentsUseOmniSwitch.isChecked());
+        if (!ActionUtils.isAvailableApp(OMNISWITCH_PACKAGE_NAME, getActivity())) {
+            prefSet.removePreference(mOmniSwitchSettings);
+        }
+
+        mRecentsUseSlim = (SwitchPreference) prefSet.findPreference(RECENTS_USE_SLIM);
+        mRecentsUseSlim.setOnPreferenceChangeListener(this);
+        mSlimRecentsSettings = (Preference) prefSet.findPreference(SLIM_RECENTS_SETTINGS);
+        updateRecents();
+    }
+
+    @Override
+    public boolean onPreferenceTreeClick(Preference preference) {
+        if (preference == mOmniSwitchSettings){
+            startActivity(INTENT_OMNISWITCH_SETTINGS);
+            return true;
+        } else if (preference == mSlimRecentsSettings) {
+            Intent intent = new Intent(getActivity(), SubActivity.class);
+            intent.putExtra(SubActivity.EXTRA_FRAGMENT_CLASS, SlimRecentPanel.class.getName());
+            intent.putExtra(SubActivity.EXTRA_TITLE,
+                    getResources().getString(R.string.recent_panel_category));
+            getActivity().startActivity(intent);
+        return true;
+        }
+        return super.onPreferenceTreeClick(preference);
     }
 
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
         ContentResolver resolver = getActivity().getContentResolver();
-        if (preference == mRecentsClearAllLocation) {
-            int location = Integer.valueOf((String) newValue);
-            int index = mRecentsClearAllLocation.findIndexOfValue((String) newValue);
-            Settings.System.putInt(resolver,
-                    Settings.System.RECENTS_CLEAR_ALL_LOCATION, location);
-            mRecentsClearAllLocation.setSummary(mRecentsClearAllLocation.getEntries()[index]);
+        boolean omniRecents = Settings.System.getInt(getActivity().getContentResolver(),
+                Settings.System.RECENTS_USE_OMNISWITCH, 0) == 1;
+        boolean slimRecents = Settings.System.getInt(getActivity().getContentResolver(),
+                Settings.System.USE_SLIM_RECENTS, 0) == 1;
+        if (preference == mRecentsUseOmniSwitch) {
+            boolean value = (Boolean) newValue;
+            if (value && !mOmniSwitchInitCalled){
+                openOmniSwitchFirstTimeWarning();
+                mOmniSwitchInitCalled = true;
+            }
+            Settings.System.putInt(
+                    resolver, Settings.System.RECENTS_USE_OMNISWITCH, value ? 1 : 0);
+            mOmniSwitchSettings.setEnabled(value);
+            updateRecents();
             return true;
-        } else if (preference == mImmersiveRecents) {
-            Settings.System.putInt(resolver, Settings.System.IMMERSIVE_RECENTS,
-                    Integer.valueOf((String) newValue));
-            mImmersiveRecents.setValue(String.valueOf(newValue));
-            mImmersiveRecents.setSummary(mImmersiveRecents.getEntry());
+        } else if (preference == mRecentsUseSlim) {
+            boolean value = (Boolean) newValue;
+            Settings.System.putInt(
+                    resolver, Settings.System.USE_SLIM_RECENTS, value ? 1 : 0);
+            updateRecents();
+            return true;
         }
         return false;
+    }
+
+    private void openOmniSwitchFirstTimeWarning() {
+        new AlertDialog.Builder(getActivity())
+                .setTitle(getResources().getString(R.string.omniswitch_first_time_title))
+                .setMessage(getResources().getString(R.string.omniswitch_first_time_message))
+                .setNegativeButton(android.R.string.ok, new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int whichButton) {
+                    }
+                }).show();
+    }
+
+    private void updateRecents() {
+        boolean omniRecents = Settings.System.getInt(getActivity().getContentResolver(),
+                Settings.System.RECENTS_USE_OMNISWITCH, 0) == 1;
+        boolean slimRecents = Settings.System.getInt(getActivity().getContentResolver(),
+                Settings.System.USE_SLIM_RECENTS, 0) == 1;
+
+        mAOSPRecents.setEnabled(!omniRecents && !slimRecents);
+        // Slim recents overwrites omni recents
+        mOmniRecents.setEnabled(omniRecents || !slimRecents);
+        // Don't allow OmniSwitch if we're already using slim recents
+        mSlimRecents.setEnabled(slimRecents || !omniRecents);
     }
 
     @Override
