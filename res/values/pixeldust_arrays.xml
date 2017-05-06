@@ -403,6 +403,7 @@
 
     <!-- Navigation bar custom dimensions -->
     <string-array name="navigation_bar_dimension_entries" translatable="false">
+        <item>@string/navigation_bar_size_56_dp</item>
         <item>@string/navigation_bar_size_52_dp</item>
         <item>@string/navigation_bar_size_48_dp_default</item>
         <item>@string/navigation_bar_size_44_dp</item>
@@ -415,6 +416,7 @@
     </string-array>
 
     <string-array name="navigation_bar_dimension_values" translatable="false">
+        <item>56</item>
         <item>52</item>
         <item>48</item>
         <item>44</item>
