@@ -575,4 +575,8 @@
     <!-- Auto brightness icon -->
     <string name="brightness_icon_title">Auto-Helligkeitssymbol</string>
     <string name="brightness_icon_summary">Zeigt vor dem Helligkeitsregler ein Symbol zum Aktivieren der Auto-Helligkeitseinstellung an</string>
+
+    <!-- Whether to display IME switcher notifcation -->
+    <string name="ime_switcher_notify">Auswahl der Eingabemethode</string>
+    <string name="ime_switcher_notify_summary">Benachrichtigung zur Auswahl der Eingabemethode anzeigen</string>
 </resources>
