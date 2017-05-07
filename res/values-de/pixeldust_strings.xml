@@ -603,4 +603,8 @@
     <!-- Battery saver color -->
     <string name="battery_saver_color_title">Einfärbung im Energiesparmodus</string>
     <string name="battery_saver_color_summary">Status- und Navigationsleiste einfärben wenn Energiesparmodus aktiviert wurde</string>
+
+    <!-- QS footer warnings -->
+    <string name="qs_footer_warnings_title">Warnhinweis in Schnelleinstellungen</string>
+    <string name="qs_footer_warnings_summary">Warnhinweis unten in den Schnelleinstellungen anzeigen sobald Netzwerk-Monitoring durch externe Apps oder VPN stattfindet</string>
 </resources>
