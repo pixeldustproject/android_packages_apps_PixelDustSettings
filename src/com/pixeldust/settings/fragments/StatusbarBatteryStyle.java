@@ -101,6 +101,7 @@ public class StatusbarBatteryStyle extends SettingsPreferenceFragment implements
         int chargeColor = Settings.Secure.getInt(resolver,
                 Settings.Secure.STATUS_BAR_CHARGE_COLOR, Color.WHITE);
         mChargeColor = (ColorPickerPreference) findPreference("status_bar_charge_color");
+        mChargeColor.setNewPreviewColor(chargeColor);
         mChargeColor.setOnPreferenceChangeListener(this);
 
         mStatusBarBatteryShowPercent =
