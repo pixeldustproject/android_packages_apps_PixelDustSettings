@@ -91,6 +91,7 @@ public class RecentsSettings extends SettingsPreferenceFragment
             prefSet.removePreference(mOmniSwitchSettings);
         }
 
+        mUseAOSPRecents = (SwitchPreference) prefSet.findPreference(RECENTS_USE_AOSP);
         mRecentsUseSlim = (SwitchPreference) prefSet.findPreference(RECENTS_USE_SLIM);
         mRecentsUseSlim.setOnPreferenceChangeListener(this);
         mSlimRecentsSettings = (Preference) prefSet.findPreference(SLIM_RECENTS_SETTINGS);
@@ -157,6 +158,12 @@ public class RecentsSettings extends SettingsPreferenceFragment
         boolean slimRecents = Settings.System.getInt(getActivity().getContentResolver(),
                 Settings.System.USE_SLIM_RECENTS, 0) == 1;
 
+        // update checked state for all toggles
+        mUseAOSPRecents.setChecked(!omniRecents && !slimRecents);
+        mRecentsUseOmniSwitch.setChecked(omniRecents && !slimRecents);
+        mRecentsUseSlim.setChecked(slimRecents && !omniRecents);
+
+        // update the enabled state for all options
         mAOSPRecents.setEnabled(!omniRecents && !slimRecents);
         // Slim recents overwrites omni recents
         mOmniRecents.setEnabled(omniRecents || !slimRecents);
