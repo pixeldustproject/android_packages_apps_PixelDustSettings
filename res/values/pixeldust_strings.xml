@@ -99,7 +99,6 @@
     <string name="status_bar_battery_percentage_text_next">Next to the icon</string>
     <string name="status_bar_battery_percentage_low_only_title">Percent only when battery is low</string>
     <string name="status_bar_battery_percentage_low_only_summary">Show battery percentage only when the battery level is under %1$d%%</string>
-    <string name="status_bar_charge_color_title">Status bar battery icon charging color</string>
     <string name="status_bar_charge_color_summary">Set the color of the status bar battery icon while charging</string>
     <string name="force_charge_battery_text_title">Status bar battery charging percent</string>
     <string name="force_charge_battery_text_summary_on">Show the battery percentage outside the icon while charging</string>
