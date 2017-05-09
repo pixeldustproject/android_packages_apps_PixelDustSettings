@@ -912,4 +912,6 @@
     <!-- Bluetooth battery -->
     <string name="bluetooth_battery_title">BT device battery</string>
     <string name="bluetooth_battery_summary">Show Bluetooth device battery level</string>
+
+    <string name="lockscreen_enable_power_menu_title">Show power menu on secure lock screen</string>
 </resources>
