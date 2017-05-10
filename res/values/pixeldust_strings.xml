@@ -154,8 +154,8 @@
 
     <string name="other_options_category">More options</string>
 
-    <!-- Language options - Volume rocker cursor control -->
-    <string name="cursor_section_header">Cursor</string>
+    <!-- Volume btn control -->
+    <string name="volbtn_section_header">Volume button</string>
 
     <!-- Volume down enter do not disturb -->
     <string name="volbtn_down_zen_title">Volume down for do not disturb</string>
@@ -923,4 +923,12 @@
     <!-- QS footer warnings -->
     <string name="qs_footer_warnings_title">QS footer warnings</string>
     <string name="qs_footer_warnings_summary">Display a warning at bottom of QS panel when network is monitored by external apps or vpn</string>
+
+    <!-- Volume Panel -->
+    <string name="volume_settings_title">Volume settings</string>
+    <string name="volume_settings_summary">View the settings for sound and volume</string>
+
+    <!-- Launch music player when headset is connected -->
+    <string name="headset_connect_player_title">Launch music app on headset connection</string>
+    <string name="headset_connect_player_summary">Launch the default music app when headset is connected</string>
 </resources>

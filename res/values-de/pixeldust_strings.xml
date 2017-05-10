@@ -607,4 +607,13 @@
     <!-- QS footer warnings -->
     <string name="qs_footer_warnings_title">Warnhinweis in Schnelleinstellungen</string>
     <string name="qs_footer_warnings_summary">Warnhinweis unten in den Schnelleinstellungen anzeigen sobald Netzwerk-Monitoring durch externe Apps oder VPN stattfindet</string>
+
+    <!-- Volume Panel -->
+    <string name="volume_settings_title">Lautstärkeeinstellungen</string>
+    <string name="volume_settings_summary">Öffnet die Einstellungen für Sound und Lautstärke</string>
+    <string name="volbtn_section_header">Lautstärketaste</string>
+
+    <!-- Launch music player when headset is connected -->
+    <string name="headset_connect_player_title">Musik App starten sobald Kopfhörer verbunden wurden</string>
+    <string name="headset_connect_player_summary">Startet automatisch die Standard Musik App wenn Kopfhörer verbunden wurden</string>
 </resources>

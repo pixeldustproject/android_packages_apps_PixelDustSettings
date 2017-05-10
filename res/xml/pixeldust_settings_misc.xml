@@ -60,6 +60,13 @@
             android:key="other_options"
             android:title="@string/other_options_category" >
 
+            <PreferenceScreen
+                android:key="volume_panel"
+                android:fragment="com.pixeldust.settings.fragments.VolumePanel"
+                android:title="@string/volume_settings_title"
+                android:summary="@string/volume_settings_summary"
+                android:persistent="false" />
+
             <ListPreference
                  android:key="pref_scrollingcache"
                  android:dialogTitle="@string/pref_scrollingcache_title"
