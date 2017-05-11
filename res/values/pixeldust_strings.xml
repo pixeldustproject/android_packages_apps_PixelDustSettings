@@ -916,4 +916,8 @@
     <string name="bluetooth_battery_summary">Show Bluetooth device battery level</string>
 
     <string name="lockscreen_enable_power_menu_title">Show power menu on secure lock screen</string>
+
+    <!-- Battery saver color -->
+    <string name="battery_saver_color_title">Battery saver color</string>
+    <string name="battery_saver_color_summary">Enable colored status and navigation bars when battery saver is activated</string>
 </resources>

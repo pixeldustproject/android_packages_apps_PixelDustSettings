@@ -58,4 +58,10 @@
         android:entryValues="@array/text_charging_symbol_values"
         android:defaultValue="0" />
 
+    <com.pixeldust.settings.preferences.SystemSettingSwitchPreference
+        android:key="battery_save_mode_color"
+        android:title="@string/battery_saver_color_title"
+        android:summary="@string/battery_saver_color_summary"
+        android:defaultValue="true" />
+
 </PreferenceScreen>

@@ -599,4 +599,8 @@
     <!-- Bluetooth battery -->
     <string name="bluetooth_battery_title">Akku für BT-Geräte</string>
     <string name="bluetooth_battery_summary">Akkuladestand für Bluetooth-Geräte anzeigen</string>
+
+    <!-- Battery saver color -->
+    <string name="battery_saver_color_title">Einfärbung im Energiesparmodus</string>
+    <string name="battery_saver_color_summary">Status- und Navigationsleiste einfärben wenn Energiesparmodus aktiviert wurde</string>
 </resources>
