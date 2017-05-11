@@ -615,5 +615,10 @@
 
     <!-- Launch music player when headset is connected -->
     <string name="headset_connect_player_title">Musik App starten sobald Kopfhörer verbunden wurden</string>
-    <string name="headset_connect_player_summary">Startet automatisch die Standard Musik App wenn Kopfhörer verbunden wurden</string>
+    <string name="headset_connect_player_disabled">Deaktiviert</string>
+    <string name="headset_connect_player_wired">Wenn Kopfhörer verbunden wurden</string>
+    <string name="headset_connect_player_bt_no_carkit">Wenn Bluetooth-Kopfhörer verbunden wurden (kein Autoset)</string>
+    <string name="headset_connect_player_bt">Wenn Bluetooth-Kopfhörer verbunden wurden</string>
+    <string name="headset_connect_player_both_no_carkit">Wenn normale Kopfhörer oder Bluetooth-Kopfhörer verbunden wurden (kein Autoset)</string>
+    <string name="headset_connect_player_both">Wenn normale Kopfhörer oder Bluetooth-Kopfhörer verbunden wurden</string>
 </resources>
