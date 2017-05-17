@@ -331,7 +331,7 @@
   <string name="status_bar_battery_style_icon_landscape">Symbol Querformat</string>
   <string name="status_bar_battery_style_circle">Kreis</string>
   <string name="status_bar_battery_style_bigcircle">Großer Kreis</string>
-  <string name="status_bar_battery_style_circle_full">Geschlossener Kreis</string>
+  <string name="status_bar_battery_style_circle_full">Ausgefüllter Kreis</string>
   <string name="status_bar_battery_style_text">Text</string>
   <string name="status_bar_battery_style_hidden">Ausgeblendet</string>
   <!-- Battery percentage options -->
