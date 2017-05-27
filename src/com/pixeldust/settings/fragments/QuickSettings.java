@@ -32,6 +32,7 @@ import android.content.pm.ResolveInfo;
 import android.content.res.Configuration;
 import android.content.res.Resources;
 import android.database.Cursor;
+import android.hardware.fingerprint.FingerprintManager;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.UserHandle;
@@ -86,6 +87,7 @@ public class QuickSettings extends SettingsPreferenceFragment implements
     private static final String CATEGORY_WEATHER = "weather_category";
     private static final String WEATHER_SERVICE_PACKAGE = "org.omnirom.omnijaws";
     private static final String DEFAULT_PACKAGE = "com.android.systemui";
+    private static final String PREF_QUICK_PULLDOWN_FP = "quick_pulldown_fp";
 
     private ListPreference mTileAnimationStyle;
     private ListPreference mTileAnimationDuration;
@@ -97,6 +99,9 @@ public class QuickSettings extends SettingsPreferenceFragment implements
     private PreferenceScreen mHeaderBrowse;
     private SecureSettingSwitchPreference mQsLock;
     private PreferenceCategory mWeatherCategory;
+    private SecureSettingSwitchPreference mQuickPulldownFp;
+
+    private FingerprintManager mFingerprintManager;
 
     private static final int MY_USER_ID = UserHandle.myUserId();
 
@@ -189,6 +194,18 @@ public class QuickSettings extends SettingsPreferenceFragment implements
         mWeatherCategory = (PreferenceCategory) prefScreen.findPreference(CATEGORY_WEATHER);
         if (mWeatherCategory != null && !isOmniJawsServiceInstalled()) {
             prefScreen.removePreference(mWeatherCategory);
+        }
+
+        //QS pulldown with one swipe on fp sensor 
+        mFingerprintManager = (FingerprintManager) getActivity().getSystemService(Context.FINGERPRINT_SERVICE);
+        mQuickPulldownFp = (SecureSettingSwitchPreference) findPreference(PREF_QUICK_PULLDOWN_FP);
+        if (!mFingerprintManager.isHardwareDetected()){
+            prefScreen.removePreference(mQuickPulldownFp);
+        } else {
+            mQuickPulldownFp = (SecureSettingSwitchPreference) findPreference(PREF_QUICK_PULLDOWN_FP);
+            mQuickPulldownFp.setChecked((Settings.System.getInt(getContentResolver(),
+                    Settings.System.STATUS_BAR_QUICK_QS_PULLDOWN_FP, 0) == 1));
+            mQuickPulldownFp.setOnPreferenceChangeListener(this);
         }
     }
 
