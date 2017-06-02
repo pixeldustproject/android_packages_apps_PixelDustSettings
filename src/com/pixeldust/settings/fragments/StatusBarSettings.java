@@ -41,11 +41,14 @@ import com.android.internal.logging.MetricsProto.MetricsEvent;
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 
+import com.pixeldust.settings.preferences.CustomSeekBarPreference;
 import com.pixeldust.settings.utils.Utils;
 
 import java.util.List;
 import java.util.ArrayList;
 import java.util.Locale;
+
+import net.margaritov.preference.colorpicker.ColorPickerPreference;
 
 public class StatusBarSettings extends SettingsPreferenceFragment implements
         OnPreferenceChangeListener {
@@ -54,9 +57,17 @@ public class StatusBarSettings extends SettingsPreferenceFragment implements
     private static final String PREF_CATEGORY_WEATHER = "pref_cat_weather";
     private static final String WEATHER_SERVICE_PACKAGE = "org.omnirom.omnijaws";
     private static final String STATUS_BAR_SHOW_TICKER = "status_bar_show_ticker";
+    private static final String PREF_TEXT_COLOR = "status_bar_ticker_text_color";
+    private static final String PREF_ICON_COLOR = "status_bar_ticker_icon_color";
+    private static final String STATUS_BAR_TICKER_FONT_STYLE = "status_bar_ticker_font_style";
+    private static final String STATUS_BAR_TICKER_FONT_SIZE  = "status_bar_ticker_font_size";
 
     private ListPreference mShowTicker;
+    private ColorPickerPreference mTextColor;
+    private ColorPickerPreference mIconColor;
     private ListPreference mStatusBarWeather;
+    private CustomSeekBarPreference mTickerFontSize;
+    private ListPreference mTickerFontStyle;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -92,6 +103,33 @@ public class StatusBarSettings extends SettingsPreferenceFragment implements
                 0, UserHandle.USER_CURRENT);
         mShowTicker.setValue(String.valueOf(tickerMode));
         mShowTicker.setSummary(mShowTicker.getEntry());
+
+        mTextColor = (ColorPickerPreference) findPreference(PREF_TEXT_COLOR);
+        mTextColor.setOnPreferenceChangeListener(this);
+        int textColor = Settings.System.getInt(resolver,
+                Settings.System.STATUS_BAR_TICKER_TEXT_COLOR, 0xffffab00);
+        String textHexColor = String.format("#%08x", (0xffffab00 & textColor));
+        mTextColor.setSummary(textHexColor);
+        mTextColor.setNewPreviewColor(textColor);
+
+        mIconColor = (ColorPickerPreference) findPreference(PREF_ICON_COLOR);
+        mIconColor.setOnPreferenceChangeListener(this);
+        int iconColor = Settings.System.getInt(resolver,
+                Settings.System.STATUS_BAR_TICKER_ICON_COLOR, 0xffffffff);
+        String iconHexColor = String.format("#%08x", (0xffffffff & iconColor));
+        mIconColor.setSummary(iconHexColor);
+        mIconColor.setNewPreviewColor(iconColor);
+
+        mTickerFontSize = (CustomSeekBarPreference) findPreference(STATUS_BAR_TICKER_FONT_SIZE);
+        mTickerFontSize.setValue(Settings.System.getInt(getActivity().getContentResolver(),
+                Settings.System.STATUS_BAR_TICKER_FONT_SIZE, 14));
+        mTickerFontSize.setOnPreferenceChangeListener(this);
+  
+        mTickerFontStyle = (ListPreference) findPreference(STATUS_BAR_TICKER_FONT_STYLE);
+        mTickerFontStyle.setOnPreferenceChangeListener(this);
+        mTickerFontStyle.setValue(Integer.toString(Settings.System.getInt(getActivity()
+                .getContentResolver(), Settings.System.STATUS_BAR_TICKER_FONT_STYLE, 0)));
+        mTickerFontStyle.setSummary(mTickerFontStyle.getEntry());
     }
 
     @Override
@@ -116,7 +154,35 @@ public class StatusBarSettings extends SettingsPreferenceFragment implements
                     Settings.System.STATUS_BAR_SHOW_TICKER, tickerMode,
                     UserHandle.USER_CURRENT);
             int index = mShowTicker.findIndexOfValue((String) newValue);
-            mShowTicker.setSummary(mShowTicker.getEntries()[index]);
+            mShowTicker.setSummary(mShowTicker.getEntries()[index] + "\n" + R.string.ticker_summary);
+            return true;
+        } else if (preference == mTextColor) {
+            String hex = ColorPickerPreference.convertToARGB(
+                   Integer.valueOf(String.valueOf(newValue)));
+            preference.setSummary(hex);
+            int intHex = ColorPickerPreference.convertToColorInt(hex);
+            Settings.System.putInt(getActivity().getApplicationContext().getContentResolver(),
+                    Settings.System.STATUS_BAR_TICKER_TEXT_COLOR, intHex);
+            return true;
+        } else if (preference == mIconColor) {
+            String hex = ColorPickerPreference.convertToARGB(
+                    Integer.valueOf(String.valueOf(newValue)));
+            preference.setSummary(hex);
+            int intHex = ColorPickerPreference.convertToColorInt(hex);
+            Settings.System.putInt(getActivity().getApplicationContext().getContentResolver(),
+                    Settings.System.STATUS_BAR_TICKER_ICON_COLOR, intHex);
+            return true;
+        } else if (preference == mTickerFontSize) {
+            int width = ((Integer)newValue).intValue();
+            Settings.System.putInt(getActivity().getContentResolver(),
+                    Settings.System.STATUS_BAR_TICKER_FONT_SIZE, width);
+            return true;
+        } else if (preference == mTickerFontStyle) {
+            int val = Integer.parseInt((String) newValue);
+            int index = mTickerFontStyle.findIndexOfValue((String) newValue);
+            Settings.System.putInt(getActivity().getContentResolver(),
+                    Settings.System.STATUS_BAR_TICKER_FONT_STYLE, val);
+            mTickerFontStyle.setSummary(mTickerFontStyle.getEntries()[index]);
             return true;
         }
         return false;

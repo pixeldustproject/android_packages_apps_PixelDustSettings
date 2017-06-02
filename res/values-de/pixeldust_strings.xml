@@ -629,8 +629,14 @@
     <!-- Status bar notification ticker -->
     <string name="notif_ticker_category">Ticker-Benachrichtigungen</string>
     <string name="ticker_title">Ticker</string>
-    <string name="ticker_summary">Aktiviert Ticker-Benachrichtigungen in der Statusleiste (Android 4.x). Nicht parallel zu Heads-Up Benachrichtigungen verwenden.</string>
+    <string name="ticker_summary">Aktiviert Ticker-Benachrichtigungen in der Statusleiste (Android 4.x). Hierfür müssen Heads-Up Benachrichtigungen ausgeschalten sein.</string>
     <string name="ticker_disabled">Ticker aus</string>
     <string name="ticker_enabled">Ticker an</string>
     <string name="ticker_media_enabled">Benachrichtigungen und Musik-Ticker</string>
+    <string name="text_title">Text</string>
+    <string name="icon_title">Symbol</string>
+    <string name="colors_title">Farben</string>
+    <string name="fonts_title">Schrift</string>
+    <string name="ticker_font_style_title">Schriftart</string>
+    <string name="ticker_font_size_title">Schriftgröße</string>
 </resources>
