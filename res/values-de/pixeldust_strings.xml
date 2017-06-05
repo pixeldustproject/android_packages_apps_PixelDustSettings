@@ -247,6 +247,7 @@
     <string name="no_iconpacks_summary">Kein Symbolepaket installiert</string>
     <string name="dialog_pick_iconpack_title">Symbolepaket wählen</string>
     <string name="default_iconpack_title">Standard Symbole</string>
+    <string name="slim_recents_corner_radius_title">Karten mit abgerundeten Ecken</string>
 
     <!-- ATTENTION: RTL languages need to replace left with right -->
     <string name="recent_panel_lefty_mode_title">Anzeige auf der linken Seite</string>
