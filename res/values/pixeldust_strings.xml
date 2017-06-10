@@ -963,15 +963,9 @@
     <string name="ticker_font_size_title">Font Size</string>
 
     <!-- Buttons -->
-    <string name="buttons_pref_title">Buttons</string>
-    <string name="buttons_pref_summary">Customize your device keys and buttons</string>
     <string name="navbar_keys_title">Navigation bar</string>
-    <string name="enable_navigation_bar_title">Enable software keys</string>
-    <string name="enable_navigation_bar_summary">Enable on-screen navigation keys</string>
     <string name="swap_navigation_keys_title">Swap keys</string>
     <string name="swap_navigation_keys_summary">Swap back and recents keys</string>
-    <string name="swap_slider_order_title">Swap slider</string>
-    <string name="swap_slider_order_summary">Swap the alert slider modes order</string>
     <string name="home_key_title">Home button</string>
     <string name="back_key_title">Back button</string>
     <string name="menu_key_title">Menu button</string>
