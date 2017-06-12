@@ -193,6 +193,8 @@
     <string name="nav_bar_dynamic_title">Dynamic navigation bar color</string>
     <string name="nav_bar_dynamic_summary">Enable to adapt navigation bar color to apps primary dark color.Restart your desired app to see effect</string>
     <string name="navigation_bar_opt_cat">Navigation bar options</string>
+    <!-- Navbar fragment -->
+    <string name="navbar_settings_title">Navigation bar</string>
     <string name="navigation_bar_cus">Navbar customization</string>
     <!-- Navbar toggle -->
     <string name="navbar_enable_bar">Enable</string>
