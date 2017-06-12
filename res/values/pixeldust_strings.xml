@@ -196,6 +196,9 @@
     <string name="navigation_bar_cus">Navbar customization</string>
     <!-- Navbar toggle -->
     <string name="navbar_enable_bar">Enable</string>
+    <!-- Swap navigation keys -->
+    <string name="swap_navigation_keys_title">Swap keys</string>
+    <string name="swap_navigation_keys_summary">Swap back and recents keys</string>
     <!-- Navbar Dimensions -->
     <string name="navbar_dimensions_title">Navbar Dimensions</string>
     <string name="navigation_bar_height_title">Navigation bar height</string>
