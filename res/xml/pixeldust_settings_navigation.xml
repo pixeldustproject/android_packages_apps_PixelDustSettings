@@ -51,7 +51,7 @@
             android:key="swap_navigation_keys"
             android:title="@string/swap_navigation_keys_title"
             android:summary="@string/swap_navigation_keys_summary"
-            android:persistent="false" />
+            android:defaultValue="false" />
 
         <com.pixeldust.settings.preferences.SystemSettingSwitchPreference
             android:key="nav_bar_dynamic"
