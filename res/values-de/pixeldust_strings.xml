@@ -627,10 +627,6 @@
     <string name="headset_connect_player_both_no_carkit">Wenn normale Kopfhörer oder Bluetooth-Kopfhörer verbunden wurden (kein Autoset)</string>
     <string name="headset_connect_player_both">Wenn normale Kopfhörer oder Bluetooth-Kopfhörer verbunden wurden</string>
 
-    <!-- QS pulldown with one swipe on fp sensor -->
-    <string name="quick_pulldown_fp_title">Quick Pulldown per Fingerabdrucksensor</string>
-    <string name="quick_pulldown_fp_summary">Die Schnelleinstellungen mit nur einem Swipe über den Fingerabdrucksensor aufklappen</string>
-
     <!-- Status bar notification ticker -->
     <string name="notif_ticker_category">Ticker-Benachrichtigungen</string>
     <string name="ticker_title">Ticker</string>

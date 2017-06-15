@@ -951,10 +951,6 @@
     <string name="headset_connect_player_both_no_carkit">When wired or BT headset (no carkit) is plugged in</string>
     <string name="headset_connect_player_both">When wired or BT headset is plugged in</string>
 
-    <!-- QS pulldown with one swipe on fp sensor -->
-    <string name="quick_pulldown_fp_title">Fingerprint quick pulldown</string>
-    <string name="quick_pulldown_fp_summary">Expand the quick settings panel with only one swipe of the fingerprint sensor</string>
-
     <!-- Status bar notification ticker -->
     <string name="notif_ticker_category">Notification ticker</string>
     <string name="ticker_title">Ticker</string>

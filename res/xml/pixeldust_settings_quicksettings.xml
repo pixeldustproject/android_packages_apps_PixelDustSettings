@@ -91,12 +91,6 @@
             android:summary="@string/qs_advanced_data_summary"
             android:defaultValue="false" />
 
-        <com.pixeldust.settings.preferences.SecureSettingSwitchPreference
-            android:key="quick_pulldown_fp"
-            android:title="@string/quick_pulldown_fp_title"
-            android:summary="@string/quick_pulldown_fp_summary"
-            android:defaultValue="false" />
-
     </PreferenceCategory>
 
     <PreferenceCategory
