@@ -154,7 +154,7 @@ public class StatusBarSettings extends SettingsPreferenceFragment implements
                     Settings.System.STATUS_BAR_SHOW_TICKER, tickerMode,
                     UserHandle.USER_CURRENT);
             int index = mShowTicker.findIndexOfValue((String) newValue);
-            mShowTicker.setSummary(mShowTicker.getEntries()[index] + "\n" + R.string.ticker_summary);
+            mShowTicker.setSummary(mShowTicker.getEntries()[index] + "\n" + getResources().getString(R.string.ticker_summary));
             return true;
         } else if (preference == mTextColor) {
             String hex = ColorPickerPreference.convertToARGB(
