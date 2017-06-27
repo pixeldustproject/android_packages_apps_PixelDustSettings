@@ -36,6 +36,9 @@
     <string name="text_charging_symbol_default">Deaktiviert</string>
     <string name="text_charging_symbol_flash">Blitz</string>
     <string name="text_charging_symbol_tilde">Tilde</string>
+    <string name="status_bar_pulse_charging_battery_title">Pulsierende Animation des Akkustandsymbols beim Laden anzeigen</string>
+    <string name="status_bar_pulse_charging_battery_summary_off">Pulsierende Animation beim Laden nur bei kompaktem Akkustandsymbol anzeigen</string>
+    <string name="status_bar_pulse_charging_battery_summary_on">Pulsierende Animation beim Laden für alle Akkustandsymbole anzeigen</string>
 
     <!-- Statusbar Clock -->
     <string name="status_bar_clock_title">Uhrzeit- und Datumseinstellungen</string>
