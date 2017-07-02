@@ -919,7 +919,7 @@
         <item>@string/hardware_keys_action_voice_search</item>
         <item>@string/hardware_keys_action_in_app_search</item>
         <item>@string/hardware_keys_action_launch_camera</item>
-        <item>@string/hardware_keys_action_sleep</item>
+        <!--item>@string/hardware_keys_action_sleep</item-->
         <item>@string/hardware_keys_action_last_app</item>
         <item>@string/hardware_keys_action_split_screen</item>
         <item>@string/hardware_keys_action_one_handed_mode_left</item>
@@ -935,7 +935,7 @@
         <item>4</item>
         <item>5</item>
         <item>6</item>
-        <item>7</item>
+        <!--item>7</item-->
         <item>8</item>
         <item>9</item>
         <item>10</item>
