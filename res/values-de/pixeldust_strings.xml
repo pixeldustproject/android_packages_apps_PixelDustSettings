@@ -67,6 +67,9 @@
 
     <string name="other_options_category">Weitere Optionen</string>
 
+    <!-- Navigation bar arrow keys -->
+    <string name="show_navbar_arrow_keys_title">Cursor-Tasten während der Tastatureingabe anzeigen</string>
+    <string name="show_navbar_arrow_keys_summary">Zeigt während der Tastatureingabe in der Navigationsleiste je links und rechts eine Cursor-Taste an.</string>
     <!-- Swap navigation keys -->
     <string name="swap_navigation_keys_title">Tasten vertauschen</string>
     <string name="swap_navigation_keys_summary">Zurück- und App-Verlauf-Taste vertauschen</string>
