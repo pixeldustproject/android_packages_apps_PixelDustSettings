@@ -527,6 +527,7 @@ public class ActionListViewSettings extends ListFragment implements
         ActionConfig actionConfig = new ActionConfig(
             action, description,
             ActionConstants.ACTION_NULL, getResources().getString(R.string.shortcut_action_none),
+            ActionConstants.ACTION_NULL, getResources().getString(R.string.shortcut_action_none),
             ActionConstants.ICON_EMPTY);
 
             mActionConfigsAdapter.add(actionConfig);
@@ -539,9 +540,6 @@ public class ActionListViewSettings extends ListFragment implements
 /* Disabled for now till all features are back. Enable it step per step!!!!!!
             case LOCKSCREEN_SHORTCUT:
                 return ActionHelper.getLockscreenShortcutConfig(mActivity);
-            case NAV_BAR:
-                return ActionHelper.getNavBarConfigWithDescription(
-                    mActivity, mActionValuesKey, mActionEntriesKey);
             case NAV_RING:
                 return ActionHelper.getNavRingConfigWithDescription(
                     mActivity, mActionValuesKey, mActionEntriesKey);
@@ -557,6 +555,9 @@ public class ActionListViewSettings extends ListFragment implements
             case SHAKE_EVENTS_DISABLED:
                 return ActionHelper.getDisabledShakeApps(mActivity);
 */
+            case NAV_BAR:
+                return ActionHelper.getNavBarConfigWithDescription(
+                    mActivity, mActionValuesKey, mActionEntriesKey);
             case RECENT_APP_SIDEBAR:
                 return ActionHelper.getRecentAppSidebarConfigWithDescription(
                         mActivity, mActionValuesKey, mActionEntriesKey);
@@ -569,9 +570,6 @@ public class ActionListViewSettings extends ListFragment implements
 /* Disabled for now till all features are back. Enable it step per step!!!!!!
             case LOCKSCREEN_SHORTCUT:
                 ActionHelper.setLockscreenShortcutConfig(mActivity, actionConfigs, reset);
-                break;
-            case NAV_BAR:
-                ActionHelper.setNavBarConfig(mActivity, actionConfigs, reset);
                 break;
             case NAV_RING:
                 ActionHelper.setNavRingConfig(mActivity, actionConfigs, reset);
@@ -589,6 +587,9 @@ public class ActionListViewSettings extends ListFragment implements
                 ActionHelper.setDisabledShakeApps(mActivity, actionConfigs, reset);
                 break;
 */
+            case NAV_BAR:
+                ActionHelper.setNavBarConfig(mActivity, actionConfigs, reset);
+                break;
             case RECENT_APP_SIDEBAR:
                 ActionHelper.setRecentAppSidebarConfig(mActivity, actionConfigs, reset);
                 break;
@@ -732,7 +733,7 @@ public class ActionListViewSettings extends ListFragment implements
                             // does not work in this case.
                             if (newConfigsSize == 0) {
                                 ActionConfig emptyAction =
-                                    new ActionConfig(null, null, null, null, null);
+                                    new ActionConfig(null, null, null, null, null, null, null);
                                 getOwner().mActionConfigsAdapter.add(emptyAction);
                                 getOwner().mActionConfigsAdapter.remove(emptyAction);
                             }
