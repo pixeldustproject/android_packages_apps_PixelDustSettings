@@ -30,7 +30,6 @@ import com.android.internal.logging.MetricsProto.MetricsEvent;
 
 import com.android.settings.SettingsPreferenceFragment;
 
-
 public class NavigationBarSettings extends SettingsPreferenceFragment {
 
     @Override
