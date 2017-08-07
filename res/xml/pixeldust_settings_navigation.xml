@@ -18,10 +18,15 @@
         android:title="@string/navbar_title"
         xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
-    <PreferenceScreen
-        android:fragment="com.pixeldust.settings.fragments.PieSettings"
-        android:key="pie_settings"
-        android:title="@string/pie_settings_summary" />
+    <PreferenceCategory
+        android:title="@string/pie_settings" >
+
+        <PreferenceScreen
+            android:fragment="com.pixeldust.settings.fragments.PieSettings"
+            android:key="pie_settings"
+            android:title="@string/pie_settings_summary" />
+
+    </PreferenceCategory>
 
     <PreferenceCategory
         android:key="navigation_bar"

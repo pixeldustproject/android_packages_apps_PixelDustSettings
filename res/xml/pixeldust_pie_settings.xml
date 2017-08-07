@@ -18,6 +18,11 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
         android:title="@string/pie_settings">
 
+    <com.pixeldust.settings.preferences.SystemSettingSwitchPreference
+        android:key="pie_state"
+        android:title="@string/pie_control_enable_title"
+        android:defaultValue="false" />
+
     <ListPreference
         android:key="pie_theme_mode"
         android:title="@string/pie_theme_mode_title"
