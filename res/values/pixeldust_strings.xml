@@ -979,6 +979,7 @@
     <string name="pie_settings">Pie settings</string>
     <string name="pie_settings_summary">Adjust pie to your liking</string>
     <string name="pie_enable_title">Enable Pie Control</string>
+    <string name="pie_enable_summary">You will need to have Immersive Mode enabled to start using Pie. Immersive Mode can be accessed from a Quick Settings tile.</string>
     <string name="pie_theme_mode_title">Theme</string>
     <string name="pie_auto">Automatic</string>
     <string name="pie_white">White</string>

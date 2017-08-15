@@ -19,10 +19,11 @@
         android:title="@string/pie_settings">
 
    <com.pixeldust.settings.preferences.SecureSettingSwitchPreference
-         android:key="pie_state"
-         android:icon="@drawable/ic_pie"
-         android:title="@string/pie_enable_title"
-         android:defaultValue="false" />
+        android:key="pie_state"
+        android:icon="@drawable/ic_pie"
+        android:title="@string/pie_enable_title"
+        android:summary="@string/pie_enable_summary"
+        android:defaultValue="false" />
 
     <ListPreference
         android:key="pie_theme_mode"
