@@ -51,7 +51,7 @@
         android:entryValues="@array/pie_status_mode_values"
         android:dependency="pie_state" />
 
-    <ListPreference
+    <!--ListPreference
         android:key="pie_gravity"
         android:dialogTitle="@string/pie_gravity_title"
         android:icon="@drawable/ic_pie_gravity"
@@ -59,6 +59,6 @@
         android:summary="@string/pie_gravity_summary"
         android:entries="@array/entries_pie_gravity"
         android:entryValues="@array/values_pie_gravity"
-        android:dependency="pie_state" />
+        android:dependency="pie_state" /-->
 
 </PreferenceScreen>
