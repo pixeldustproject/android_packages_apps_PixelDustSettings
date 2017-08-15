@@ -646,4 +646,28 @@
     <string name="fonts_title">Schrift</string>
     <string name="ticker_font_style_title">Schriftart</string>
     <string name="ticker_font_size_title">Schriftgröße</string>
+
+    <!-- Pie -->
+    <string name="pie_settings">Pie Controls Einstellungen</string>
+    <string name="pie_settings_summary">Pie nach deinem Geschmack anpassen</string>
+    <string name="pie_enable_title">Pie Controls verwenden</string>
+    <string name="pie_enable_summary">Um Pie Controls verwenden zu können, muss zuvor der Immersive Mode über eine Kachel in den Schnelleinstellungen aktiviert sein.</string>
+    <string name="pie_theme_mode_title">Theme</string>
+    <string name="pie_auto">Automatisch</string>
+    <string name="pie_white">Hell</string>
+    <string name="pie_dark">Dunkel</string>
+    <string name="pie_battery_title">Akkuanzeige</string>
+    <string name="pie_battery_text">Nur Text</string>
+    <string name="pie_battery_circle">Nur Kreis</string>
+    <string name="pie_battery_both">Beides</string>
+    <string name="pie_status_indicator">Netzwerkanzeige</string>
+    <string name="pie_status_wifi">Nur WLAN</string>
+    <string name="pie_status_mobile">Nur mobiles Netzwerk</string>
+    <string name="pie_status_none">Keines</string>
+    <string name="pie_status_both">Beides</string>
+    <string name="pie_gravity_title">Pie Position</string>
+    <string name="pie_gravity_summary">Position festlegen, an der Pie Controls angezeigt werden sollen</string>
+    <string name="pie_gravity_bottom">Unten</string>
+    <string name="pie_gravity_right">Rechts</string>
+    <string name="pie_gravity_left">Links</string>
 </resources>
