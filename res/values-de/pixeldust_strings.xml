@@ -676,4 +676,8 @@
     <string name="night_mode_summary">%s</string>
     <string name="night_mode_no">Hell</string>
     <string name="night_mode_yes">Dunkel</string>
+
+    <!-- Quick Settings quick pull-down toggle -->
+    <string name="quick_settings_quick_pull_down_title">Schnelleinstellungen schnell herunterziehen</string>
+    <string name="quick_settings_quick_pull_down_summary">Die Schnelleinstellungen werden automatisch durch Herunterziehen von der rechten Bildschirmoberkante aufgeklappt</string>
 </resources>

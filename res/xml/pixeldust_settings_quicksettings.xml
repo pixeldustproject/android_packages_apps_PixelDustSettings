@@ -56,6 +56,12 @@
         android:title="@string/qs_panel_title">
 
         <com.pixeldust.settings.preferences.SecureSettingSwitchPreference
+            android:key="quick_settings_quick_pull_down"
+            android:title="@string/quick_settings_quick_pull_down_title"
+            android:summary="@string/quick_settings_quick_pull_down_summary"
+            android:defaultValue="false" />
+
+        <com.pixeldust.settings.preferences.SecureSettingSwitchPreference
             android:key="qs_show_brightness"
             android:title="@string/qs_brightness_slider_title"
             android:summary="@string/qs_brightness_slider_summary"

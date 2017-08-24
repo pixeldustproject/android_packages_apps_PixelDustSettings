@@ -1004,4 +1004,8 @@
     <string name="night_mode_summary">%s</string>
     <string name="night_mode_no">Light</string>
     <string name="night_mode_yes">Dark</string>
+
+    <!-- Quick Settings quick pull-down toggle -->
+    <string name="quick_settings_quick_pull_down_title">Quick pull-down</string>
+    <string name="quick_settings_quick_pull_down_summary">Automatically expand Quick Settings when pulling from the side of the screen</string>
 </resources>
